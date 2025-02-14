@@ -786,6 +786,8 @@
                                 <li><a class="nav-link" data-bs-toggle="tab" href="#address">Addresses</a></li>
                                 <li><a class="nav-link" data-bs-toggle="tab" href="#account-details">Account details</a></li>
                                 <li><a class="nav-link" data-bs-toggle="tab" href="#wishlist">Wishlist</a></li>
+                                <li><a class="nav-link" data-bs-toggle="tab" href="#change-password">Change Password</a></li>
+                                <li><a class="nav-link" data-bs-toggle="tab" href="#forgot-password">Forgot Password</a></li>
                                 <li><a class="nav-link" href="login.html">logout</a></li>
                             </ul>
                             <!-- End Nav tabs -->
@@ -1279,46 +1281,46 @@
                                                 <div class="row">
                                                     <div class="form-group">
                                                         <div class="d-flex mt-3 col-md-12 col-lg-12 col-xl-12">
-                                                            <label class="control-label me-3 mb-0"><strong>Title</strong></label>
+                                                            <label class="control-label me-3 mb-0"><strong>Gender</strong></label>
                                                             <div class="customRadio clearfix me-3 mb-0">
-                                                                <input name="mr" id="mr" value="1" checked="checked" type="radio" class="padding-10px-right">
+                                                                <input name="gender" id="mr" value="1" checked="checked" type="radio" class="padding-10px-right" disabled>
                                                                 <label for="mr" class="mb-0">Mr. &nbsp;</label>
                                                             </div>
                                                             <div class="customRadio clearfix me-3 mb-0">
-                                                                <input name="mr" id="mrs" value="0" type="radio" class="padding-10px-right">
-                                                                <label for="mrs" class="mb-0">Mrs.</label>
+                                                                <input name="gender" id="ms" value="0" type="radio" class="padding-10px-right" disabled>
+                                                                <label for="ms" class="mb-0">Ms.</label>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                                        <label for="input-firstname" class="d-none">First Name <span class="required-f">*</span></label>
-                                                        <input name="firstname" placeholder="First Name" value="" id="input-firstname" class="form-control" type="text">
+                                                        <label for="input-firstname">First Name</label>
+                                                        <input name="firstname" placeholder="First Name" value="" id="input-firstname" class="form-control" type="text" readonly>
                                                     </div>
                                                     <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                                        <label for="input-lastname" class="d-none">Last Name <span class="required-f">*</span></label>
-                                                        <input name="lastname" placeholder="Last Name" value="" id="input-lastname" class="form-control" type="text">
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                                        <label for="input-email" class="d-none">Email <span class="required-f">*</span></label>
-                                                        <input name="email" placeholder="Email" value="" id="input-email" class="form-control" type="email" required>
-                                                    </div>
-                                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                                        <label for="input-password" class="d-none">Password <span class="required-f">*</span></label>
-                                                        <input name="password" placeholder="Password" value="" id="input-password" class="form-control" type="password">
+                                                        <label for="input-lastname">Last Name</label>
+                                                        <input name="lastname" placeholder="Last Name" value="" id="input-lastname" class="form-control" type="text" readonly>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                                        <label for="input-telephone" class="d-none">Telephone <span class="required-f">*</span></label>
+                                                        <label>ID</label>
+                                                        <input name="ID" placeholder="ID" class="form-control" type="text" readonly>
+                                                    </div>
+                                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
+                                                        <label for="input-telephone">Telephone</label>
                                                         <input name="telephone" placeholder="Telephone" value="" id="input-telephone" class="form-control" type="tel">
                                                     </div>
+                                                </div>
+                                                <div class="row">
                                                     <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                                        <label class="d-none">Birthdate <span class="required-f">*</span></label>
-                                                        <input name="birthdate" class="form-control" type="date">
+                                                        <label for="input-DOB">Date of Birth</label>
+                                                        <input name="DOB" placeholder="DOB" value="" id="input-DOB" class="form-control" type="text" readonly>
+                                                    </div>
+                                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
+                                                        <label for="input-email">Email</label>
+                                                        <input name="email" placeholder="Email" value="" id="input-email" class="form-control" type="email" required>
                                                     </div>
                                                 </div>
                                                 <div class="row mb-4">
@@ -1339,6 +1341,84 @@
                                     </div>
                                 </div>
                                 <!-- End Account Details -->
+
+                                <!-- Change Password -->
+                                <div id="change-password" class="tab-pane fade">
+                                    <form method="post" action="#" accept-charset="UTF-8" class="needs-validation customer-form" novalidate>	
+                                        <h3 class="h4 text-uppercase mb-2">Change your password</h3>
+                                        <p>Use the form below to change your password.</p>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                <div class="form-group">
+                                                    <label for="CurrentPassword" class="d-none">Current Password <span class="required">*</span></label>
+                                                    <input type="password" class="form-control" name="customer[password]" placeholder="Current Password" id="CurrentPassword" required />
+                                                    <div class="invalid-feedback">
+                                                        Please write current password.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                <div class="form-group">
+                                                    <label for="NewPassword" class="d-none">New Password <span class="required">*</span></label>
+                                                    <input type="password" class="form-control" name="customer[password]" placeholder="New Password" id="NewPassword" required />
+                                                    <small class="form-text text-muted">Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters.</small>
+                                                    <div class="invalid-feedback">
+                                                        Please write new password.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                <div class="form-group">
+                                                    <label for="Verify" class="d-none">Verify <span class="required">*</span></label>
+                                                    <input type="password" class="form-control" name="customer[password]" placeholder="Verify" id="Verify" required />
+                                                    <small class="form-text text-muted">To confirm, type the new password again.</small>
+                                                    <div class="invalid-feedback">
+                                                        Don't match new password.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="text-left col-12 col-sm-12 col-md-12 col-lg-12">
+                                                <p class="d-flex-center">
+                                                    <input type="submit" class="btn rounded me-auto" value="Change Password">
+                                                    <a href="login.html"><i class="align-middle icon an an-an-double-left me-2"></i>Back To Login Page</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- End Change Password -->
+                                 
+                                <!-- Forgot Password -->
+                                <div id="forgot-password" class="tab-pane fade">
+                                    <form method="post" action="#" accept-charset="UTF-8" class="needs-validation customer-form" novalidate>	
+                                        <h3 class="h4 text-uppercase mb-2">Reset your password</h3>
+                                <p>Please enter your email address below. You will receive a link to reset your password.</p>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <label for="CustomerEmail" class="d-none">Email Address <span class="required">*</span></label>
+                                            <input type="email" class="form-control" name="customer[email]" placeholder="Email" id="CustomerEmail" required />
+                                            <div class="invalid-feedback">
+                                                Please valid email.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="text-left col-12 col-sm-12 col-md-12 col-lg-12">
+                                        <p class="d-flex-center">
+                                            <input type="submit" class="btn rounded me-auto" value="Password Reset">
+                                            <a href="login.html"><i class="align-middle icon an an-an-double-left me-2"></i>Back To Login Page</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                    </form>
+                                </div>
+                                <!-- End Forgot Password -->
 
                                 <!-- Wishlist -->
                                 <div id="wishlist" class="product-wishlist tab-pane fade">
@@ -1717,6 +1797,7 @@
             <!--Including Javascript-->
             <script src="assets/js/plugins.js"></script>
             <script src="assets/js/main.js"></script>
+            <script src="assets/js/JHY/jhy.js"></script>
 
         </div>
         <!--End Page Wrapper-->
