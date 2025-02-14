@@ -1,0 +1,54 @@
+/*********************************************************************************
+  Template Name: Documentation - Optimal Multipurpose eCommerce Bootstrap 5 Html Template
+  Version: 1.0
+**********************************************************************************/
+
+.body { position: relative; }
+.sub-title { font-size: 30px; margin-top: 50px; margin-bottom: 10px; padding-bottom: 0; }
+.sub-title a { font-size: 16px; }
+.section.docs-heading { padding: 60px 0; }
+
+/* all links */
+.docs-sidebar .nav > li { border-bottom: 1px solid #282828; display: flex; flex-wrap: wrap; align-items: center; width: 100%; }
+.docs-sidebar .nav > li > a { position: relative; color: #fff; border-left: 2px solid transparent; padding: 10px 20px; font-size: 16px; font-weight: 500; display: block; width: 100%; }
+.docs-sidebar .nav .nav > li > a { padding-left: 40px; font-size: 14px; }
+.docs-sidebar .nav > li:not(.active) > a:hover { color: #f35333; text-decoration: none; background-color: transparent; border-left-color: #f35333; }
+.docs-sidebar .nav > li > a:focus { text-decoration: none; background-color: transparent; }
+.docs-sidebar .nav > .active > a { color: #f35333; text-decoration: none; background-color: transparent; border-left-color: #f35333; }
+.docs-sidebar .nav > .active > a, .docs-sidebar .nav > .active:hover > a, .docs-sidebar .nav > .active:focus > a { font-weight: 700; }
+.docs-sidebar .nav .nav > .active > a, .docs-sidebar .nav .nav > .active:hover > a, .docs-sidebar .nav .nav > .active:focus > a { font-weight: 500; }
+.docs-sidebar .nav > li > a i { min-width: 16px; font-size: 16px; }
+.docs-sidebar .nav > li.submenu .nav { width: 100%; }
+.docs-sidebar .nav > li.submenu.active > a:before { content: "\eb69"; }
+.docs-sidebar .nav > li.submenu .nav li a:before { content: "\eb68"; font-family: 'annimex-icons'; position: absolute; left: 20px; font-size: 18px; line-height:normal; margin: 1px 0 0; }
+
+@media screen and (min-width: 992px){
+    .d-lg-none { display: none; }
+    .docs-sidebar .nav > li.submenu > a:before { content: "\eb66"; font-family: 'annimex-icons'; position: absolute; right: 20px; font-size: 22px; line-height: normal; }
+    .docs-sidebar .nav ul { display: none; width: 100%; }
+    .docs-sidebar .nav > .active > ul { display: block; }
+}
+@media screen and (max-width: 991px){
+    .js-mobile-nav-toggle .an { display:none; font-size:21px; color:#fff; }
+    .site-header__menu { border:0; padding:0; display:flex; cursor:pointer; background: transparent; color: #fff; }
+    .docs-sidebar .nav > li.submenu.active > a:before { content: none; }
+    .doc-main-sidebar .site-header__menu:after { content: ""; background: rgba(0,0,0,0.5); position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: -1;  }
+    .js-mobile-nav-toggle.mobile-nav--open .an-bars-l,
+    .js-mobile-nav-toggle.mobile-nav--close .icon.an.an-times-l { display:inline-block; }
+}
+
+/* Syntax Highlighter : Sublime Theme */
+.syntaxhighlighter { background-color: #2b303b !important; padding: 15px 0; margin: 15px 0 !important; max-height: 600px; }
+.syntaxhighlighter a, .syntaxhighlighter div, .syntaxhighlighter code, .syntaxhighlighter table, .syntaxhighlighter table td, .syntaxhighlighter table tr, .syntaxhighlighter table tbody, .syntaxhighlighter table thead, .syntaxhighlighter table caption, .syntaxhighlighter textarea { line-height: 1.3em !important; }
+.syntaxhighlighter .line.alt1 { background-color: #2b303b !important; }
+.syntaxhighlighter .line.alt2 { background-color: #2b303b !important; }
+.syntaxhighlighter .string, .syntaxhighlighter .string a { color: #90be8c !important; }
+.syntaxhighlighter .color1, .syntaxhighlighter .color1 a { color: #d08770 !important; }
+.syntaxhighlighter .plain, .syntaxhighlighter .plain a { color: #c0c5ce !important; }
+.syntaxhighlighter .keyword { color: #bf616a !important; }
+.syntaxhighlighter .gutter { color: #757a84 !important; }
+.syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 { background-color: #333E49 !important; }
+.syntaxhighlighter .gutter .line.highlighted { background-color: #343d46 !important; color: #757a84 !important; }
+.syntaxhighlighter .value { color: #96b5b4 !important; }
+.syntaxhighlighter .color3, .syntaxhighlighter .color3 a { color: #b48ead !important; }
+.syntaxhighlighter .js.keyword { color: #b48ead !important; }
