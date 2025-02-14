@@ -751,20 +751,26 @@
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4 mb-md-0">
                                 <div class="inner">
-                                    <form method="post" action="#" class="customer-form">	
+                                    <form  method="post" action="#" class="needs-validation customer-form" novalidate>	
                                         <h3 class="h4 text-uppercase">REGISTERED CUSTOMERS</h3>
                                         <p>If you have an account with us, please log in.</p>
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                                 <div class="form-group">
-                                                    <label for="CustomerEmail" class="d-none">Email <span class="required">*</span></label>
-                                                    <input type="email" name="customer[email]" placeholder="Email" id="CustomerEmail" value="" required />
+                                                    <label for="CustomerEmail" class="d-none">ID or Email<span class="required">*</span></label>
+                                                    <input type="email" class="form-control" name="customer[email]" placeholder="ID or Email" id="CustomerEmail" value="" required />
+                                                    <div class="invalid-feedback">
+                                                        Please valid ID or email.
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                                 <div class="form-group">
                                                     <label for="CustomerPassword" class="d-none">Password <span class="required">*</span></label>
-                                                    <input type="password" name="customer[password]" placeholder="Password" id="CustomerPassword" value="" required />                        	
+                                                    <input type="password" class="form-control" name="customer[password]" placeholder="Password" id="CustomerPassword" value="" required />                        	
+                                                    <div class="invalid-feedback">
+                                                        Please valid password.
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -966,7 +972,7 @@
             <!--Including Javascript-->
             <script src="assets/js/plugins.js"></script>
             <script src="assets/js/main.js"></script>
-
+            <script src="assets/js/JHY/jhy.js"></script>
         </div>
         <!--End Page Wrapper-->
     </body>

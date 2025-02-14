@@ -750,26 +750,101 @@
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 box mt-2 mt-lg-5">	
                             <h3 class="h4 text-uppercase mb-3">Personal Information</h3>
-                            <form method="post" action="#" accept-charset="UTF-8" class="customer-form">
+                            <form method="post" action="#" accept-charset="UTF-8" class="needs-validation customer-form" novalidate>
                                 <div class="row">
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                                         <div class="form-group">
                                             <label for="CustomerFirstName" class="d-none">First Name <span class="required">*</span></label>
-                                            <input id="CustomerFirstName" type="text" name="customer[first-name]" placeholder="First Name" required />
+                                            <input id="CustomerFirstName" type="text" class="form-control" name="customer[first-name]" placeholder="First Name" required />
+                                            <div class="invalid-feedback">
+                                                Please valid first name.
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                                         <div class="form-group">
                                             <label for="CustomerLastName" class="d-none">Last Name <span class="required">*</span></label>
-                                            <input id="CustomerLastName" type="text" name="customer[Last-name]" placeholder="Last Name" required />                       	
+                                            <input id="CustomerLastName" type="text" class="form-control" name="customer[Last-name]" placeholder="Last Name" required />                       	
+                                            <div class="invalid-feedback">
+                                                Please valid last name.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div class="form-check">
+                                            <input id="CustomerMan" type="radio" class="form-check-input" name="customer[Gender]" required />                       	
+                                            <label for="CustomerMan" class="form-check-label">Mr.</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input id="CustomerWoman" type="radio" class="form-check-input" name="customer[Gender]" required />                       	
+                                            <label for="CustomerWoman" class="form-check-label">Ms.</label>
+                                            <div class="invalid-feedback">
+                                                Please check gender.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label for="CustomerDOB" class="d-none">Date of birth<span class="required">*</span></label>
+                                            <input id="CustomerDOB" type="date" class="form-control" name="customer[DOB]" required />
+                                            <div class="invalid-feedback">
+                                                Please valid date of birth.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row accordion" id="accordionExample">
+                                    <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+                                        <div class="form-group">
+                                            <select class="form-select" id="CustomerAgency" required>
+                                                <option selected="selected" value="">통신사</option>
+                                                <option value="SKT">SKT</option>
+                                                <option value="SK">SK</option>
+                                                <option value="LG">LG U+</option>
+                                                <option value="LG">알뜰폰</option>                     	
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Please select a valid agency.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label for="CustomerPhone" class="d-none">Phone <span class="required">*</span></label>
+                                            <input id="CustomerPhone" type="text" class="form-control" name="customer[phone]" placeholder="phone" required />                        	
+                                            <div class="invalid-feedback">
+                                                Please valid phone number.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <input type="submit" class="btn rounded mb-3 accordion-button collapsed" value="인증번호 받기" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false">
+                                    </div>
+                                </div>
+                                <div class="row accordion-collapse collapse" id="collapseOne" data-bs-parent="#accordionExample">
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label for="CustomerCertification" class="d-none">인증번호<span class="required">*</span></label>
+                                            <input id="CustomerCertification" type="email" class="form-control" name="customer[CustomerCertification]" placeholder="인증번호" required />                        	
+                                            <div class="invalid-feedback">
+                                                Please valid certification number.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <input type="submit" class="btn rounded mb-3" value="인증확인">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                                         <div class="form-group">
                                             <label for="CustomerEmail" class="d-none">Email Address <span class="required">*</span></label>
-                                            <input id="CustomerEmail" type="email" name="customer[email]" placeholder="Email" required />                        	
+                                            <input id="CustomerEmail" type="email" class="form-control" name="customer[email]" placeholder="Email" required />                        	
+                                            <div class="invalid-feedback">
+                                                Please valid Email.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -783,24 +858,41 @@
                                 </div>
                                 <h3 class="h4 text-uppercase mb-3">Login Information</h3>
                                 <div class="row">
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">                                	
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                                         <div class="form-group">
-                                            <label for="CustomerPassword" class="d-none">Password <span class="required">*</span></label>
-                                            <input id="CustomerPassword" type="password" name="customer[Password]" placeholder="Password" required />
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                                        <div class="form-group">
-                                            <label for="CustomerConfirmPassword" class="d-none">Confirm Password <span class="required">*</span></label>
-                                            <input id="CustomerConfirmPassword" type="Password" name="customer[ConfirmPassword]" placeholder="Confirm Password" required />                        	
+                                            <label for="CustomerID" class="d-none">ID<span class="required">*</span></label>
+                                            <input id="CustomerID" type="text" class="form-control" name="customer[ID]" placeholder="ID" required />
+                                            <div class="invalid-feedback">
+                                                Please valid ID.
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="text-left col-12 col-sm-12 col-md-6 col-lg-6">
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">                                	
+                                        <div class="form-group">
+                                            <label for="CustomerPassword" class="d-none">Password <span class="required">*</span></label>
+                                            <input id="CustomerPassword" type="password" class="form-control" name="customer[Password]" placeholder="Password" required />
+                                            <div class="invalid-feedback">
+                                                Please valid password.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label for="CustomerConfirmPassword" class="d-none">Confirm Password <span class="required">*</span></label>
+                                            <input id="CustomerConfirmPassword" type="Password" class="form-control" name="customer[ConfirmPassword]" placeholder="Confirm Password" required />                        	
+                                            <div class="invalid-feedback">
+                                                Please valid confirm password.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="text-left col-12 col-sm-12 col-md-8 col-lg-8">
                                         <input type="submit" class="btn rounded mb-3" value="Submit">
                                     </div>
-                                    <div class="text-right col-12 col-sm-12 col-md-6 col-lg-6">
+                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                                         <a href="login.html"><i class="align-middle icon an an-an-double-left me-2"></i>Back To Login</a>
                                     </div>
                                 </div>
@@ -985,6 +1077,7 @@
             <!--Including Javascript-->
             <script src="assets/js/plugins.js"></script>
             <script src="assets/js/main.js"></script>
+            <script src="assets/js/JHY/jhy.js"></script>
 
         </div>
         <!--End Page Wrapper-->
