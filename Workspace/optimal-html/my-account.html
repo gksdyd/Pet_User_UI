@@ -15,6 +15,8 @@
         <!-- Main Style CSS -->
         <link rel="stylesheet" href="assets/css/style.css" />
         <link rel="stylesheet" href="assets/css/responsive.css" />
+        <!-- JHY Style CSS -->
+        <link rel="stylesheet" href="assets/css/JHY/jhy.css" />
     </head>
 
     <body class="category-page category-empty">
@@ -788,6 +790,7 @@
                                 <li><a class="nav-link" data-bs-toggle="tab" href="#wishlist">Wishlist</a></li>
                                 <li><a class="nav-link" data-bs-toggle="tab" href="#change-password">Change Password</a></li>
                                 <li><a class="nav-link" data-bs-toggle="tab" href="#forgot-password">Forgot Password</a></li>
+                                <li><a class="nav-link" data-bs-toggle="tab" href="#withdraw">Withdraw</a></li>
                                 <li><a class="nav-link" href="login.html">logout</a></li>
                             </ul>
                             <!-- End Nav tabs -->
@@ -1615,6 +1618,34 @@
                                     <!-- End Grid Product-->
                                 </div>
                                 <!-- End Wishlist -->
+
+                                <!-- withdraw -->
+                                <div id="withdraw" class="tab-pane fade text-style-jhy">
+                                    <form method="post" action="#" accept-charset="UTF-8" class="needs-validation customer-form" novalidate>	
+                                        <h1 class="text-uppercase mb-2">PET-Friends를 떠나신다니 너무 아쉬워요.</h1>
+                                        <p class="fs-6">PET-Friends에서는 우리 아이를 돌봄해주거나 친구가 되어줄 이웃들과 함께할 수 있어요.</p>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                <div class="form-group">
+                                                    <label for="CustomerEmail" class="d-none">Email Address <span class="required">*</span></label>
+                                                    <input type="email" class="form-control" name="customer[email]" placeholder="Email" id="CustomerEmail" required />
+                                                    <div class="invalid-feedback">
+                                                        Please valid email.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="text-left col-12 col-sm-12 col-md-12 col-lg-12">
+                                                <p class="d-flex-center">
+                                                    <input type="submit" class="btn rounded me-auto" value="Password Reset">
+                                                    <a href="login.html"><i class="align-middle icon an an-an-double-left me-2"></i>Back To Login Page</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- End withdraw -->
                             </div>
                             <!-- End Tab panes -->
                         </div>
