@@ -1,3 +1,14 @@
-.text-style-jhy {
+.text-style-center {
     text-align: center;
+}
+.withdraw-box-style {
+    background-color: rgb(227, 188, 238);
+    width: 50%;
+    margin: 0 auto;
+}
+.withdraw-check-style {
+    background-color: rgb(235, 232, 232);
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
 }

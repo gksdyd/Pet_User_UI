@@ -1280,7 +1280,6 @@
                                     <div class="account-login-form bg-light-gray padding-20px-all">
                                         <form>
                                             <fieldset>
-                                                <p>Already have an account? <a href="login.html" class="link-underline"> Log in instead!</a></p>
                                                 <div class="row">
                                                     <div class="form-group">
                                                         <div class="d-flex mt-3 col-md-12 col-lg-12 col-xl-12">
@@ -1319,8 +1318,20 @@
                                                 <div class="row">
                                                     <div class="form-group col-md-6 col-lg-6 col-xl-6">
                                                         <label for="input-DOB">Date of Birth</label>
-                                                        <input name="DOB" placeholder="DOB" value="" id="input-DOB" class="form-control" type="text" readonly>
+                                                        <input name="DOB" placeholder="DOB" value="" id="input-DOB" class="form-control" type="text">
                                                     </div>
+                                                    <div class="d-flex mt-3 col-md-12 col-lg-6 col-xl-6 pt-3">
+                                                        <div class="customRadio clearfix me-3 mb-0">
+                                                            <input name="calendar" id="solar" value="1" checked="checked" type="radio" class="padding-10px-right">
+                                                            <label for="solar" class="mb-0">양력 &nbsp;</label>
+                                                        </div>
+                                                        <div class="customRadio clearfix me-3 mb-0">
+                                                            <input name="calendar" id="lunar" value="0" type="radio" class="padding-10px-right">
+                                                            <label for="lunar" class="mb-0">음력</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
                                                     <div class="form-group col-md-6 col-lg-6 col-xl-6">
                                                         <label for="input-email">Email</label>
                                                         <input name="email" placeholder="Email" value="" id="input-email" class="form-control" type="email" required>
@@ -1328,13 +1339,9 @@
                                                 </div>
                                                 <div class="row mb-4">
                                                     <div class="col-md-12 col-lg-12 col-xl-12">
-                                                        <div class="customCheckbox clearfix mb-2">
-                                                            <input id="offers" name="offers" type="checkbox" />
-                                                            <label for="offers">Receive offers from our partners</label>
-                                                        </div>
                                                         <div class="customCheckbox clearfix">
                                                             <input id="newsletter" name="newsletter" type="checkbox" />
-                                                            <label for="newsletter">Sign up for our newsletter</label>
+                                                            <label for="newsletter">이메일 수신 알림 동의</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1348,12 +1355,11 @@
                                 <!-- Change Password -->
                                 <div id="change-password" class="tab-pane fade">
                                     <form method="post" action="#" accept-charset="UTF-8" class="needs-validation customer-form" novalidate>	
-                                        <h3 class="h4 text-uppercase mb-2">Change your password</h3>
-                                        <p>Use the form below to change your password.</p>
+                                        <h3 class="h4 text-uppercase mb-2">Change password</h3>
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                                                 <div class="form-group">
-                                                    <label for="CurrentPassword" class="d-none">Current Password <span class="required">*</span></label>
+                                                    <label for="CurrentPassword">현재 비밀번호 <span class="required">*</span></label>
                                                     <input type="password" class="form-control" name="customer[password]" placeholder="Current Password" id="CurrentPassword" required />
                                                     <div class="invalid-feedback">
                                                         Please write current password.
@@ -1364,21 +1370,19 @@
                                         <div class="row">
                                             <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                                                 <div class="form-group">
-                                                    <label for="NewPassword" class="d-none">New Password <span class="required">*</span></label>
+                                                    <label for="NewPassword">새 비밀번호 <span class="required">*</span></label>
                                                     <input type="password" class="form-control" name="customer[password]" placeholder="New Password" id="NewPassword" required />
-                                                    <small class="form-text text-muted">Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters.</small>
                                                     <div class="invalid-feedback">
-                                                        Please write new password.
+                                                        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters.
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                                                 <div class="form-group">
-                                                    <label for="Verify" class="d-none">Verify <span class="required">*</span></label>
+                                                    <label for="Verify">새 비밀번호 확인 <span class="required">*</span></label>
                                                     <input type="password" class="form-control" name="customer[password]" placeholder="Verify" id="Verify" required />
-                                                    <small class="form-text text-muted">To confirm, type the new password again.</small>
                                                     <div class="invalid-feedback">
-                                                        Don't match new password.
+                                                        To confirm, type the new password again.
                                                     </div>
                                                 </div>
                                             </div>
@@ -1398,27 +1402,26 @@
                                 <!-- Forgot Password -->
                                 <div id="forgot-password" class="tab-pane fade">
                                     <form method="post" action="#" accept-charset="UTF-8" class="needs-validation customer-form" novalidate>	
-                                        <h3 class="h4 text-uppercase mb-2">Reset your password</h3>
-                                <p>Please enter your email address below. You will receive a link to reset your password.</p>
-                                <div class="row">
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                        <div class="form-group">
-                                            <label for="CustomerEmail" class="d-none">Email Address <span class="required">*</span></label>
-                                            <input type="email" class="form-control" name="customer[email]" placeholder="Email" id="CustomerEmail" required />
-                                            <div class="invalid-feedback">
-                                                Please valid email.
+                                        <h3 class="h4 text-uppercase mb-2">Reset password</h3>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                <div class="form-group">
+                                                    <label for="CustomerEmail">Email Address <span class="required">*</span></label>
+                                                    <input type="email" class="form-control" name="customer[email]" placeholder="Email" id="CustomerEmail" required />
+                                                    <div class="invalid-feedback">
+                                                        Please valid email.
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="text-left col-12 col-sm-12 col-md-12 col-lg-12">
-                                        <p class="d-flex-center">
-                                            <input type="submit" class="btn rounded me-auto" value="Password Reset">
-                                            <a href="login.html"><i class="align-middle icon an an-an-double-left me-2"></i>Back To Login Page</a>
-                                        </p>
-                                    </div>
-                                </div>
+                                        <div class="row">
+                                            <div class="text-left col-12 col-sm-12 col-md-12 col-lg-12">
+                                                <p class="d-flex-center">
+                                                    <input type="submit" class="btn rounded me-auto" value="Password Reset">
+                                                    <a href="login.html"><i class="align-middle icon an an-an-double-left me-2"></i>Back To Login Page</a>
+                                                </p>
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
                                 <!-- End Forgot Password -->
@@ -1620,27 +1623,158 @@
                                 <!-- End Wishlist -->
 
                                 <!-- withdraw -->
-                                <div id="withdraw" class="tab-pane fade text-style-jhy">
-                                    <form method="post" action="#" accept-charset="UTF-8" class="needs-validation customer-form" novalidate>	
-                                        <h1 class="text-uppercase mb-2">PET-Friends를 떠나신다니 너무 아쉬워요.</h1>
-                                        <p class="fs-6">PET-Friends에서는 우리 아이를 돌봄해주거나 친구가 되어줄 이웃들과 함께할 수 있어요.</p>
-                                        <div class="row">
-                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                                                <div class="form-group">
-                                                    <label for="CustomerEmail" class="d-none">Email Address <span class="required">*</span></label>
-                                                    <input type="email" class="form-control" name="customer[email]" placeholder="Email" id="CustomerEmail" required />
-                                                    <div class="invalid-feedback">
-                                                        Please valid email.
+                                <div id="withdraw" class="tab-pane fade">	
+                                    <form method="post" action="#" accept-charset="UTF-8" class="needs-validation customer-form" novalidate>
+                                        <h1 class="text-uppercase mb-2  text-style-center">피터펫을 떠나신다니 너무 아쉬워요.</h1>
+                                        <p class="fs-6 mb-5  text-style-center">피터펫에서는 우리 아이를 돌봄해주거나 친구가 되어줄 이웃들과 함께할 수 있어요.</p>
+                                        <div class="accordion" id="accordionExample">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <div class="form-control p-2 withdraw-box-style">
+                                                        <label><h2 class="text-uppercase">
+                                                            <span>이웃과의 채팅방</span>
+                                                            <span style="float: right;">개</span>
+                                                        </h2></label>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="text-left col-12 col-sm-12 col-md-12 col-lg-12">
-                                                <p class="d-flex-center">
-                                                    <input type="submit" class="btn rounded me-auto" value="Password Reset">
-                                                    <a href="login.html"><i class="align-middle icon an an-an-double-left me-2"></i>Back To Login Page</a>
-                                                </p>
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-3">
+                                                    <div class="form-control p-2 withdraw-box-style">
+                                                        <label><h2 class="text-uppercase">
+                                                            <span>이웃이 올린 돌봄 요청 글</span>
+                                                            <span style="float: right;">개</span>
+                                                        </h2></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-5">
+                                                    <div class="form-control p-2 withdraw-check-style">
+                                                        <label><h2 class="text-uppercase">꼭 확인해주세요!</h2></label>
+                                                        <ul>
+                                                            <li class="fs-6">탈퇴 후 3개월 간 재가입이 불가능하며, 삭제된 정보를 복구할 수 없어요.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <label><h2 class="text-uppercase">피터펫을 떠나시는 이유가 무엇인가요?</h2></label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="form-check">
+                                                        <input id="Reason1" type="radio" class="form-check-input" name="WithdrawReason" required />                       	
+                                                        <label for="Reason1" class="form-check-label fs-6">우리 동네 이웃이 많지 않아요.</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="form-check">
+                                                        <input id="Reason2" type="radio" class="form-check-input" name="WithdrawReason" required />                       	
+                                                        <label for="Reason2" class="form-check-label fs-6">지금은 돌봄이 필요하지 않아요.</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="form-check">
+                                                        <input id="Reason3" type="radio" class="form-check-input" name="WithdrawReason" required />                       	
+                                                        <label for="Reason3" class="form-check-label fs-6">이웃에게 연락이 오지 않아요.</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="form-check">
+                                                        <input id="Reason4" type="radio" class="form-check-input" name="WithdrawReason" required />                       	
+                                                        <label for="Reason4" class="form-check-label fs-6">돌봄 요청글을 삭제할 수 없어요.</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="form-check">
+                                                        <input id="Reason5" type="radio" class="form-check-input" name="WithdrawReason" required />                       	
+                                                        <label for="Reason5" class="form-check-label fs-6">대표 아이를 삭제하거나 변경할 수가 없어요.</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="form-check">
+                                                        <input id="Reason6" type="radio" class="form-check-input" name="WithdrawReason" required />                       	
+                                                        <label for="Reason6" class="form-check-label fs-6">불쾌감을 주는 이웃을 만났어요.</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="form-check">
+                                                        <input id="Reason7" type="radio" class="form-check-input" name="WithdrawReason" required />                       	
+                                                        <label for="Reason7" class="form-check-label fs-6">알림이 오지 않아요.</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="form-check">
+                                                        <input id="Reason8" type="radio" class="form-check-input" name="WithdrawReason" required />                       	
+                                                        <label for="Reason8" class="form-check-label fs-6">홈페이지 사용이 불편해요.</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="form-check">
+                                                        <input id="Reason9" type="radio" class="form-check-input" name="WithdrawReason" required />                       	
+                                                        <label for="Reason9" class="form-check-label fs-6">상품이 적어요.</label>
+                                                        <div class="invalid-feedback fs-6">
+                                                            Please check reason.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                                                    <div class="form-check">
+                                                        <input id="Reason10" type="radio" class="form-check-input accordion-body collapsed" name="WithdrawReason" data-bs-toggle="collapse" data-bs-target="#collapseEtc" aria-expanded="false" required />                       	
+                                                        <label for="Reason10" class="form-check-label fs-6">기타</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row accordion-collapse collapse" id="collapseEtc" data-bs-parent="#accordionExample">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <textarea name="EtcReason" id="Reason10"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-4">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-5">
+                                                    <div class="form-control p-2 withdraw-check-style">
+                                                        <p class="fs-6 mb-2">어떤 점이 불편하셨는지 말씀해주시면 문제를 해결할 수 있도록 최선을 다해 도와드릴게요!</p>
+                                                        <a href="contact-style2.html"><button type="button" class="fs-6">피터펫 문의하기</button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="text-left col-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <p class="d-flex-center">
+                                                        <input type="submit" class="btn rounded me-auto" value="탈퇴할래요!" data-bs-toggle="modal" data-bs-target="#WithdrawModal">
+                                                        <a href="index-demo15.html"><i class="align-middle icon an an-an-double-left me-2"></i>좀더 둘러볼게요!</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="WithdrawModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Withdraw</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body fs-6">
+                                                            정말 탈퇴하시겠습니까?
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                                                        <button type="button" class="btn btn-primary">탈퇴할래요!</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </form>

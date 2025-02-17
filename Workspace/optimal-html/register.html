@@ -749,10 +749,10 @@
                     <!--Main Content-->
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 box mt-2 mt-lg-5">	
-                            <h3 class="h4 text-uppercase mb-3">Personal Information</h3>
+                            <h3 class="h4 text-uppercase mb-3">개인 정보</h3>
                             <form method="post" action="#" accept-charset="UTF-8" class="needs-validation customer-form" novalidate>
                                 <div class="row">
-                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                    <div class="col-12 col-sm-12 col-md-5 col-lg-5">
                                         <div class="form-group">
                                             <label for="CustomerFirstName" class="d-none">First Name <span class="required">*</span></label>
                                             <input id="CustomerFirstName" type="text" class="form-control" name="customer[first-name]" placeholder="First Name" required />
@@ -761,7 +761,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                    <div class="col-12 col-sm-12 col-md-5 col-lg-5">
                                         <div class="form-group">
                                             <label for="CustomerLastName" class="d-none">Last Name <span class="required">*</span></label>
                                             <input id="CustomerLastName" type="text" class="form-control" name="customer[Last-name]" placeholder="Last Name" required />                       	
@@ -770,7 +770,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                    <div class="col-12 col-sm-12 col-md-2 col-lg-2">
                                         <div class="form-check">
                                             <input id="CustomerMan" type="radio" class="form-check-input" name="customer[Gender]" required />                       	
                                             <label for="CustomerMan" class="form-check-label">Mr.</label>
@@ -785,12 +785,25 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                    <div class="col-12 col-sm-12 col-md-5 col-lg-5">
                                         <div class="form-group">
                                             <label for="CustomerDOB" class="d-none">Date of birth<span class="required">*</span></label>
                                             <input id="CustomerDOB" type="date" class="form-control" name="customer[DOB]" required />
                                             <div class="invalid-feedback">
                                                 Please valid date of birth.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-2 col-lg-2">
+                                        <div class="form-check">
+                                            <input id="CustomerSolar" type="radio" class="form-check-input" name="customer[Calendar]" required />                       	
+                                            <label for="CustomerSolar" class="form-check-label">양력</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input id="CustomerLunar" type="radio" class="form-check-input" name="customer[Calendar]" required />                       	
+                                            <label for="CustomerLunar" class="form-check-label">음력</label>
+                                            <div class="invalid-feedback">
+                                                Please check Calendar.
                                             </div>
                                         </div>
                                     </div>
@@ -810,7 +823,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                    <div class="col-12 col-sm-12 col-md-5 col-lg-5">
                                         <div class="form-group">
                                             <label for="CustomerPhone" class="d-none">Phone <span class="required">*</span></label>
                                             <input id="CustomerPhone" type="text" class="form-control" name="customer[phone]" placeholder="phone" required />                        	
@@ -852,11 +865,11 @@
                                     <div class="form-group form-check col-12 col-sm-12 col-md-12 col-lg-12">
                                         <div class="customCheckbox clearfix">
                                             <input id="newsletter" name="newsletter" type="checkbox" />
-                                            <label for="newsletter">Sign Up for Newsletter</label>
+                                            <label for="newsletter">이메일 수신 알림 동의</label>
                                         </div>
                                     </div>
                                 </div>
-                                <h3 class="h4 text-uppercase mb-3">Login Information</h3>
+                                <h3 class="h4 text-uppercase mb-3">로그인 정보</h3>
                                 <div class="row">
                                     <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                                         <div class="form-group">
@@ -889,10 +902,10 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="text-left col-12 col-sm-12 col-md-8 col-lg-8">
+                                    <div class="text-left col-12 col-sm-12 col-md-6 col-lg-6">
                                         <input type="submit" class="btn rounded mb-3" value="Submit">
                                     </div>
-                                    <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                    <div class="text-right col-12 col-sm-12 col-md-6 col-lg-6">
                                         <a href="login.html"><i class="align-middle icon an an-an-double-left me-2"></i>Back To Login</a>
                                     </div>
                                 </div>
