@@ -553,8 +553,9 @@ body:not(.searchact) .header-main:not(.sticky-header) { background:none; box-sha
     #siteNav > li .megamenu ul { padding:0; list-style:none; }
     #siteNav > li:hover > .megamenu { -webkit-transform:translateY(0); transform:translateY(0); opacity:1; visibility:visible; pointer-events:visible; }
     #siteNav > li .megamenu.style1 .lvl-1 { margin-bottom:0; }
-    #siteNav > li .megamenu .lvl-1 a.lvl-1 { color:#000; font-size:13px; text-transform:uppercase; padding:0 0 8px; font-weight:400; }
-    #siteNav > li .megamenu .lvl-1 .site-nav { color:#000; padding:3px 0; font-weight:400; }
+    #siteNav > li .megamenu .lvl-1 a.lvl-1 { color:#000; font-size:20px; text-transform:uppercase; padding:0 0 8px; font-weight:400; }
+    #siteNav > li .megamenu .lvl-1 .subLinks { font-size:15px;}
+    #siteNav > li .megamenu .lvl-1 .site-nav { color:#909090; padding:3px 0; font-weight:400; font-size: 12px;}
     #siteNav > li .megamenu .lvl-1 .site-nav:hover { color:#000; }
     #siteNav > li .megamenu .lvl-1 .site-nav:before { content: ""; display:inline-block; width:0px; height:2px; vertical-align:middle; background-color:#000; -ms-transition:all 0.3s ease-in-out; -webkit-transition:all 0.3s ease-in-out; transition:all 0.3s ease-in-out; }
     #siteNav > li .megamenu .lvl-1 .site-nav:hover:before { width:5px; margin-right:3px; }
