@@ -426,7 +426,7 @@ body:not(.searchact) .header-main:not(.sticky-header) { background:none; box-sha
 
 .logo { margin:0; }
 .logo a { position: relative;display: block;font-weight: 700;text-transform: uppercase;font-size: 22px;line-height: 1;text-decoration: none;text-align: center; }
-.logo img { display:block; max-width:154px; max-height:32px; margin:0 auto; }
+.logo img { display:block; max-width:154px; max-height:40px; margin:0 auto; }
 
 .iconset .icon { font-size:17px; min-width:17px; text-decoration:none; display:inline-block; vertical-align:middle; }
 .iconset { position:relative; color:#030505; height:30px; line-height:30px; text-align:center; padding:0 9px; cursor:pointer; display:flex;align-items:center; }
