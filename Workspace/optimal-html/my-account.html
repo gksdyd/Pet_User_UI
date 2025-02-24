@@ -1321,57 +1321,170 @@
                                     <div class="account-login-form bg-light-gray padding-20px-all">
                                         <form  method="post" action="#" class="needs-validation customer-form" novalidate>
                                             <fieldset>
-                                                <div class="row">
-                                                    <div class="form-group">
-                                                        <div class="d-flex mt-3 col-md-12 col-lg-12 col-xl-12">
-                                                            <label class="control-label me-3 mb-0"><strong>성별</strong></label>
-                                                            <div class="customRadio clearfix me-3 mb-0">
-                                                                <input name="gender" id="mr" value="1" checked="checked" type="radio" class="padding-10px-right" disabled>
-                                                                <label for="mr" class="mb-0">남성 &nbsp;</label>
-                                                            </div>
-                                                            <div class="customRadio clearfix me-3 mb-0">
-                                                                <input name="gender" id="ms" value="0" type="radio" class="padding-10px-right" disabled>
-                                                                <label for="ms" class="mb-0">여성</label>
+                                                <div class="row form-group">
+                                                    <div class="d-flex mt-3 col-md-6 col-lg-6 col-xl-6">
+                                                        <label class="control-label me-3 mb-0">품종<span class="required">*</span></label>
+                                                        <div class="customRadio clearfix me-3 mb-0">
+                                                            <input name="kind" id="dog" value="1" checked="checked" type="radio" class="padding-10px-right">
+                                                            <label for="dog" class="mb-0">강아지 &nbsp;</label>
+                                                        </div>
+                                                        <div class="customRadio clearfix me-3 mb-0">
+                                                            <input name="kind" id="cat" value="0" type="radio" class="padding-10px-right">
+                                                            <label for="cat" class="me-3 mb-0">고양이</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex mt-3 col-md-6 col-lg-6 col-xl-6">
+                                                        <label class="control-label me-3 mb-0">성별<span class="required">*</span></label>
+                                                        <div class="customRadio clearfix me-3 mb-0">
+                                                            <input name="pet-gender" id="male" value="1" checked="checked" type="radio" class="padding-10px-right">
+                                                            <label for="male" class="mb-0">남자아이 &nbsp;</label>
+                                                        </div>
+                                                        <div class="customRadio clearfix me-3 mb-0">
+                                                            <input name="pet-gender" id="female" value="0" type="radio" class="padding-10px-right">
+                                                            <label for="female" class="mb-0">여자아이</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col-md-6 col-lg-6 col-xl-6">
+                                                        <div class="form-control" action="" method="get">
+                                                            <input class="search-txt" type="text" name="" placeholder="품종">
+                                                            <button class="search-btn" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon an an-search-l"></i></button>
+                                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                                <div class="modal-dialog modal-dialog-scrollable">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">품종 선택</h1>
+                                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                        ...
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                                                                        <button type="button" class="btn btn-primary">저장</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                                        <label for="input-firstname">성</label>
-                                                        <input name="firstname" placeholder="성" value="" id="input-firstname" class="form-control" type="text" readonly>
-                                                    </div>
-                                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                                        <label for="input-lastname">이름</label>
-                                                        <input name="lastname" placeholder="이름" value="" id="input-lastname" class="form-control" type="text" readonly>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                                        <label>ID</label>
-                                                        <input name="ID" placeholder="ID" class="form-control" type="text" readonly>
-                                                    </div>
-                                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                                        <label for="input-DOB">생일</label>
-                                                        <input name="DOB" placeholder="생일" value="" id="input-DOB" class="form-control" type="text" readonly>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                                        <label for="input-email">이메일<span class="required">*</span></label>
-                                                        <input name="email" placeholder="이메일" value="" id="input-email" class="form-control" type="email" required>
-                                                    </div>
-                                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                                        <label for="input-telephone">전화번호<span class="required">*</span></label>
-                                                        <input name="telephone" placeholder="전화번호" value="" id="input-telephone" class="form-control" type="tel">
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-4">
-                                                    <div class="col-md-12 col-lg-12 col-xl-12">
-                                                        <div class="customCheckbox clearfix">
-                                                            <input id="newsletter" name="newsletter" type="checkbox" />
-                                                            <label for="newsletter">이메일 수신 알림 동의</label>
+                                                        <label for="input-dogname">이름<span class="required">*</span></label>
+                                                        <input name="lastname" placeholder="이름" value="" id="input-dogname" class="form-control" type="text" required>
+                                                        <div class="invalid-feedback">
+                                                            이름을 입력해주세요.
                                                         </div>
+                                                    </div>
+                                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
+                                                        <label for="input-nickname">닉네임<span class="required">*</span></label>
+                                                        <select class="form-select register-agency" id="input-nickname" required>
+                                                            <option selected="selected" value="">닉네임</option>
+                                                            <option value="guardian">보호자</option>
+                                                            <option value="mother">엄마</option>
+                                                            <option value="father">아빠</option>
+                                                            <option value="sister-girl">언니</option>                     	
+                                                            <option value="sister-boy">누나</option>                     	
+                                                            <option value="brother-girl">오빠</option>                     	
+                                                            <option value="brother-boy">형</option>                     	
+                                                        </select>
+                                                        <div class="invalid-feedback">
+                                                            닉네임을 선택해주세요.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
+                                                        <label for="Pet-DOB">생일<span class="required">*</span></label>
+                                                        <input id="Pet-DOB" type="date" class="form-control" name="PetDOB" required />
+                                                        <div class="invalid-feedback">
+                                                            생일을 입력해주세요.
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-md-6 col-lg-6 col-xl-6">
+                                                        <label>체중<span class="required">*</span></label>
+                                                        <input name="weight" placeholder="체중" class="form-control" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="d-flex mt-3 col-md-6 col-lg-6 col-xl-6">
+                                                        <label class="control-label me-3 mb-0">예방 접종<span class="required">*</span></label>
+                                                        <div class="customRadio clearfix me-3 mb-0">
+                                                            <input name="pet-vaccination" id="vaccination-yes" value="1" checked="checked" type="radio" class="padding-10px-right">
+                                                            <label for="vaccination-yes" class="mb-0">예. &nbsp;</label>
+                                                        </div>
+                                                        <div class="customRadio clearfix me-3 mb-0">
+                                                            <input name="pet-vaccination" id="vaccination-no" value="0" type="radio" class="padding-10px-right">
+                                                            <label for="vaccination-no" class="mb-0">아니오.</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex mt-3 col-md-6 col-lg-6 col-xl-6">
+                                                        <label class="control-label me-3 mb-0">중성화<span class="required">*</span></label>
+                                                        <div class="customRadio clearfix me-3 mb-0">
+                                                            <input name="pet-neutering" id="neutering-yes" value="1" checked="checked" type="radio" class="padding-10px-right">
+                                                            <label for="neutering-yes" class="mb-0">예. &nbsp;</label>
+                                                        </div>
+                                                        <div class="customRadio clearfix me-3 mb-0">
+                                                            <input name="pet-neutering" id="neutering-no" value="0" type="radio" class="padding-10px-right">
+                                                            <label for="neutering-no" class="mb-0">아니오.</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group mt-3">
+                                                    <div class="col-md-6 col-lg-6 col-xl-6">
+                                                        <label>아이의 성격/특징<span class="required">*</span></label>
+                                                        <div class="form-control" action="" method="get">
+                                                            <input class="search-txt" type="text" name="" placeholder="아이의 성격/특징">
+                                                            <button class="search-btn" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon an an-search-l"></i></button>
+                                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                                <div class="modal-dialog modal-dialog-scrollable">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">품종 선택</h1>
+                                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                        ...
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                                                                        <button type="button" class="btn btn-primary">저장</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6 col-xl-6">
+                                                        <label>아이의 질병/질환<span class="required">*</span></label>
+                                                        <div class="form-control" action="" method="get">
+                                                            <input class="search-txt" type="text" name="" placeholder="아이의 질병/질환">
+                                                            <button class="search-btn" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="icon an an-search-l"></i></button>
+                                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                                <div class="modal-dialog modal-dialog-scrollable">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">품종 선택</h1>
+                                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                        ...
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                                                                        <button type="button" class="btn btn-primary">저장</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group mt-3">
+                                                    <div class="col-md-6 col-lg-6 col-xl-6">
+                                                        
                                                     </div>
                                                 </div>
                                             </fieldset>
