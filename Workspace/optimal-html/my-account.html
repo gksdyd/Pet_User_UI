@@ -728,7 +728,7 @@
                                 <li><a class="nav-link" data-bs-toggle="tab" href="#downloads">Downloads</a></li>
                                 <li><a class="nav-link" data-bs-toggle="tab" href="#address">Addresses</a></li>
                                 <li><a class="nav-link" data-bs-toggle="tab" href="#account-details">마이페이지</a></li>
-                                <li><a class="nav-link" data-bs-toggle="tab" href="#pet-details">반려동물페이지</a></li>
+                                <li><a class="nav-link" data-bs-toggle="tab" href="#pet-list">반려동물목록</a></li>
                                 <li><a class="nav-link" data-bs-toggle="tab" href="#wishlist">Wishlist</a></li>
                                 <li><a class="nav-link" data-bs-toggle="tab" href="#change-password">비밀번호 변경</a></li>
                                 <li><a class="nav-link" data-bs-toggle="tab" href="#withdraw">탈퇴</a></li>
@@ -1315,9 +1315,78 @@
                                 </div>
                                 <!-- End Account Details -->
 
+                                <!-- Pet List -->
+                                <div id="pet-list" class="tab-pane fade">
+                                    <h3>반려동물목록</h3>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-3 col-md-3 col-sm-4">
+                                            <div class="product-img mb-3 mb-sm-0">
+                                                <img id="presentimg1" src="assets/images/mypetinfo/my-account-pet-image.png">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-9 col-md-9 col-sm-8">
+                                            <div class="tracking-detail">
+                                                <ul>
+                                                    <li>
+                                                        <div class="left"><span>이름</span></div>
+                                                        <div class="right"><span>해덕이</span></div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="left"><span>품종</span></div>
+                                                        <div class="right"><span>믹스견</span></div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="left"><span>성별</span></div>
+                                                        <div class="right"><span>여자아이</span></div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="left"><span>생일</span></div>
+                                                        <div class="right"><span>2024-09-01</span></div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="left"><span>체중</span></div>
+                                                        <div class="right"><span>6kg</span></div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="left"><span>예방 접종 유무</span></div>
+                                                        <div class="right"><span>예</span></div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="left"><span>중성화 유무</span></div>
+                                                        <div class="right"><span>예</span></div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="left"><span>아이의 성격</span></div>
+                                                        <div class="right"><ul>
+                                                            <li>발랄</li>
+                                                            <li>똥꼬발랄</li>
+                                                            <li>깨물어주고 싶음</li>
+                                                        </ul></div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="left"><span>아이의 질병/질환</span></div>
+                                                        <div class="right"><ul>
+                                                            <li></li>
+                                                        </ul></div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="text-left col-lg-6 col-md-6 col-sm-6">
+                                            <input type="button" class="btn rounded mb-3" value="수정" id="button-modify" onclick="showContent('modify')"></a>
+                                        </div>
+                                        <div class="text-right col-lg-6 col-md-6 col-sm-6">
+                                            <input type="button" class="btn rounded mb-3" value="등록" id="button-register" onclick="showContent('register')"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Pet List -->
+
                                 <!-- Pet Details -->
-                                <div id="pet-details" class="tab-pane fade">
-                                    <h3>반려동물페이지</h3>
+                                <div id="pet-details">
+                                    <h3>반려동물등록</h3>
                                     <div class="account-login-form bg-light-gray padding-20px-all">
                                         <form  method="post" action="#" class="needs-validation customer-form" novalidate>
                                             <fieldset>
@@ -1405,30 +1474,33 @@
                                                     </div>
                                                     <div class="form-group col-md-6 col-lg-6 col-xl-6">
                                                         <label>체중<span class="required">*</span></label>
-                                                        <input name="weight" placeholder="체중" class="form-control" type="text">
+                                                        <input name="weight" placeholder="체중" class="form-control" type="text" required />
+                                                        <div class="invalid-feedback">
+                                                            체중을 입력해주세요.
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="row">
-                                                    <div class="d-flex mt-3 col-md-6 col-lg-6 col-xl-6">
-                                                        <label class="control-label me-3 mb-0">예방 접종<span class="required">*</span></label>
-                                                        <div class="customRadio clearfix me-3 mb-0">
-                                                            <input name="pet-vaccination" id="vaccination-yes" value="1" checked="checked" type="radio" class="padding-10px-right">
-                                                            <label for="vaccination-yes" class="mb-0">예. &nbsp;</label>
+                                                    <div class="d-flex mt-3 col-md-6 col-lg-6 col-xl-6 form-check">
+                                                        <label class="control-label me-3">예방 접종<span class="required">*</span></label>
+                                                        <div class="customRadio clearfix me-3">
+                                                            <input name="pet-vaccination" id="vaccination-yes" value="1" type="radio" class="padding-10px-right form-check-input" required />
+                                                            <label for="vaccination-yes" class="form-check-label">예. &nbsp;</label>
                                                         </div>
-                                                        <div class="customRadio clearfix me-3 mb-0">
-                                                            <input name="pet-vaccination" id="vaccination-no" value="0" type="radio" class="padding-10px-right">
-                                                            <label for="vaccination-no" class="mb-0">아니오.</label>
+                                                        <div class="customRadio clearfix me-3">
+                                                            <input name="pet-vaccination" id="vaccination-no" value="0" type="radio" class="padding-10px-right form-check-input" required />
+                                                            <label for="vaccination-no" class="form-check-label">아니오.</label>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex mt-3 col-md-6 col-lg-6 col-xl-6">
-                                                        <label class="control-label me-3 mb-0">중성화<span class="required">*</span></label>
-                                                        <div class="customRadio clearfix me-3 mb-0">
-                                                            <input name="pet-neutering" id="neutering-yes" value="1" checked="checked" type="radio" class="padding-10px-right">
-                                                            <label for="neutering-yes" class="mb-0">예. &nbsp;</label>
+                                                    <div class="d-flex mt-3 col-md-6 col-lg-6 col-xl-6 form-check">
+                                                        <label class="control-label me-3">중성화<span class="required">*</span></label>
+                                                        <div class="customRadio clearfix me-3">
+                                                            <input name="pet-neutering" id="neutering-yes" value="1" type="radio" class="padding-10px-right form-check-input" required />
+                                                            <label for="neutering-yes" class="form-check-label">예. &nbsp;</label>
                                                         </div>
-                                                        <div class="customRadio clearfix me-3 mb-0">
-                                                            <input name="pet-neutering" id="neutering-no" value="0" type="radio" class="padding-10px-right">
-                                                            <label for="neutering-no" class="mb-0">아니오.</label>
+                                                        <div class="customRadio clearfix me-3">
+                                                            <input name="pet-neutering" id="neutering-no" value="0" type="radio" class="padding-10px-right form-check-input" required />
+                                                            <label for="neutering-no" class="form-check-label">아니오.</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1484,13 +1556,24 @@
                                                 </div>
                                                 <div class="row form-group mt-3">
                                                     <div class="col-md-3 col-lg-3 col-xl-3">
-                                                        <button type="button"><img src="assets/images/mypetinfo/my-account-pet-image.png"><span class="tooltip-label top">대표사진</span></button>
+                                                        <a data-toggle="tooltip" title="대표사진">
+                                                            <img id="presentimg" src="assets/images/mypetinfo/my-account-pet-image.png">
+                                                        </a>
+                                                        <div class="input-type" id="file-area">
+                                                            <input type="file" id="presentimg1" onchange="loadImg(this,1)" class="form-control-file border" name="uploadfile1" required>
+                                                        </div>
                                                     </div>
-                                                    <div class="col-md-3 col-lg-3 col-xl-3">
-                                                        <button type="button"><img src="assets/images/mypetinfo/my-account-pet-image.png"></button>
-                                                    </div>
-                                                    <div class="col-md-3 col-lg-3 col-xl-3">
-                                                        <button type="button"><img src="assets/images/mypetinfo/my-account-pet-image.png"></button>
+                                                </div>
+                                                <div class="row form-group mt-3">
+                                                    <div class="col-md-12 col-lg-12 col-xl-12">
+                                                        <div class="form-control p-2 pet-image-check-style">
+                                                            <label><h2 class="text-uppercase">사진 인증 안내 사항</h2></label>
+                                                            <ul>
+                                                                <li class="fs-6">프로필 등록, 반려인 인증 외의 목적으로는 이용되지 않습니다.</li>
+                                                                <li class="fs-6">3장의 사진이 같은 반려동물의 사진이 아닐 경우, 재인증을 요청할 수 있습니다.</li>
+                                                                <li class="fs-6">프로필에 등록한 반려동물과 일치하지 않거나 얼굴 식별이 불가능한 경우 인증이 어려울 수 있습니다.</li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </fieldset>

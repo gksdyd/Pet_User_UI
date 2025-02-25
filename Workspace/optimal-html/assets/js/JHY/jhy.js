@@ -43,3 +43,52 @@
             }
         }).open();
     }
+
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+    $(function(){
+        $("#file-area").hide();  
+        $("#presentimg").click(function(){
+            $("#presentimg1").click();	
+        })
+    })
+
+    function loadImg(inputFile,num){
+
+        if(inputFile.files.length == 1){
+        
+            var reader = new FileReader();
+        
+            reader.readAsDataURL(inputFile.files[0]);
+            reader.onload = function(e){
+                $("#presentimg").attr("src",e.target.result);
+            }
+        
+            } else {
+                $("#presentimg").attr("src",null);
+            }
+        
+    }
+
+    // 페이지 진입 시 기본 값
+window.addEventListener('DOMContentLoaded', function() {
+    showContent('modify');
+  });
+  
+  function showContent(content) {
+    var contentA = document.getElementById("pet-list");
+    var contentB = document.getElementById("pet-details");
+  
+    // 내용 숨김
+    contentA.style.display = "none";
+    contentB.style.display = "none";
+  
+    // 선택한 내용 보이기
+    if (content === "modify") {
+      contentA.style.display = "block";
+    } else if (content === "register") {
+      contentB.style.display = "block";
+    }
+  }
