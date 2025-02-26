@@ -79,16 +79,20 @@ window.addEventListener('DOMContentLoaded', function() {
   
   function showContent(content) {
     var contentA = document.getElementById("pet-list");
-    var contentB = document.getElementById("pet-details");
+    var contentB = document.getElementById("pet-register");
+    var contentC = document.getElementById("pet-detail");
   
     // 내용 숨김
     contentA.style.display = "none";
     contentB.style.display = "none";
+    contentC.style.display = "none";
   
     // 선택한 내용 보이기
     if (content === "list") {
       contentA.style.display = "block";
     } else if (content === "register") {
       contentB.style.display = "block";
-    }
+    } else if (content === "detail") {
+        contentC.style.display = "block";
+      }
   }
