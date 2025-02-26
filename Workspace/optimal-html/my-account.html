@@ -1375,7 +1375,7 @@
                                     </div>
                                     <div class="row mt-3">
                                         <div class="text-left col-lg-6 col-md-6 col-sm-6">
-                                            <input type="button" class="btn rounded mb-3" value="수정" id="button-modify" onclick="showContent('modify')"></a>
+                                            <input type="button" class="btn rounded mb-3" value="수정" id="button-modify" onclick="showContent('register')"></a>
                                         </div>
                                         <div class="text-right col-lg-6 col-md-6 col-sm-6">
                                             <input type="button" class="btn rounded mb-3" value="등록" id="button-register" onclick="showContent('register')"></a>
@@ -1392,25 +1392,25 @@
                                             <fieldset>
                                                 <div class="row form-group">
                                                     <div class="d-flex mt-3 col-md-6 col-lg-6 col-xl-6">
-                                                        <label class="control-label me-3 mb-0">품종<span class="required">*</span></label>
-                                                        <div class="customRadio clearfix me-3 mb-0">
-                                                            <input name="kind" id="dog" value="1" checked="checked" type="radio" class="padding-10px-right">
-                                                            <label for="dog" class="mb-0">강아지 &nbsp;</label>
+                                                        <label class="control-label me-3">품종<span class="required">*</span></label>
+                                                        <div class="customRadio clearfix me-3">
+                                                            <input name="kind" id="dog" value="1" type="radio" class="padding-10px-right form-check-input" required />
+                                                            <label for="dog" class="form-check-label">강아지 &nbsp;</label>
                                                         </div>
-                                                        <div class="customRadio clearfix me-3 mb-0">
-                                                            <input name="kind" id="cat" value="0" type="radio" class="padding-10px-right">
-                                                            <label for="cat" class="me-3 mb-0">고양이</label>
+                                                        <div class="customRadio clearfix me-3">
+                                                            <input name="kind" id="cat" value="0" type="radio" class="padding-10px-right form-check-input" required />
+                                                            <label for="cat" class="form-check-label">고양이</label>
                                                         </div>
                                                     </div>
                                                     <div class="d-flex mt-3 col-md-6 col-lg-6 col-xl-6">
-                                                        <label class="control-label me-3 mb-0">성별<span class="required">*</span></label>
-                                                        <div class="customRadio clearfix me-3 mb-0">
-                                                            <input name="pet-gender" id="male" value="1" checked="checked" type="radio" class="padding-10px-right">
-                                                            <label for="male" class="mb-0">남자아이 &nbsp;</label>
+                                                        <label class="control-label me-3">성별<span class="required">*</span></label>
+                                                        <div class="customRadio clearfix me-3">
+                                                            <input name="pet-gender" id="male" value="1" type="radio" class="padding-10px-right form-check-input" required />
+                                                            <label for="male" class="form-check-label">남자아이 &nbsp;</label>
                                                         </div>
-                                                        <div class="customRadio clearfix me-3 mb-0">
-                                                            <input name="pet-gender" id="female" value="0" type="radio" class="padding-10px-right">
-                                                            <label for="female" class="mb-0">여자아이</label>
+                                                        <div class="customRadio clearfix me-3">
+                                                            <input name="pet-gender" id="female" value="0" type="radio" class="padding-10px-right form-check-input" required />
+                                                            <label for="female" class="form-check-label">여자아이</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1576,8 +1576,15 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="row form-group mt-3">
+                                                    <div class="text-left col-lg-6 col-md-6 col-sm-6">
+                                                        <input type="submit" class="btn rounded mb-3" value="저장">
+                                                    </div>
+                                                    <div class="text-right col-lg-6 col-md-6 col-sm-6">
+                                                        <input type="button" class="btn rounded mb-3" value="목록" id="button-list" onclick="showContent('list')">
+                                                    </div>
+                                                </div>
                                             </fieldset>
-                                            <button type="submit" class="btn btn-primary rounded">Save</button>
                                         </form>
                                     </div>
                                 </div>

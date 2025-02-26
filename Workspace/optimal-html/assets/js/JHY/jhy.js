@@ -74,7 +74,7 @@
 
     // 페이지 진입 시 기본 값
 window.addEventListener('DOMContentLoaded', function() {
-    showContent('modify');
+    showContent('list');
   });
   
   function showContent(content) {
@@ -86,7 +86,7 @@ window.addEventListener('DOMContentLoaded', function() {
     contentB.style.display = "none";
   
     // 선택한 내용 보이기
-    if (content === "modify") {
+    if (content === "list") {
       contentA.style.display = "block";
     } else if (content === "register") {
       contentB.style.display = "block";
