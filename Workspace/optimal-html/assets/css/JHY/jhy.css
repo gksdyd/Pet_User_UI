@@ -44,3 +44,7 @@
     height: auto;
     margin: 0 auto;
 }
+.pet-categories-font-style {
+    font-size: x-small;
+    font-weight: lighter;
+}
