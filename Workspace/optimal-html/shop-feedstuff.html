@@ -579,51 +579,60 @@
                         <div class="col-12 col-sm-12 col-md-12 col-lg-3 sidebar filterbar">
                             <div class="closeFilter d-block d-lg-none"><i class="icon icon an an-times-r"></i></div>
                             <div class="sidebar_tags">
-                                <!--Categories-->
-                                <div class="sidebar_widget categories filterBox filter-widget">
-                                    <div class="widget-title"><h2 class="mb-0">Categories</h2></div>
-                                    <div class="widget-content filterDD">
-                                        <ul class="clearfix sidebar_categories mb-0">
-                                            <li class="lvl-1 sub-level"><a href="#;" class="site-nav">급여연령</a>
-                                                <ul class="sublinks">
-                                                    <li class="level2"><a href="#;" class="site-nav">퍼피(1세미만)</a></li>
-                                                    <li class="level2"><a href="#" class="site-nav">어덜트(1~7세)</a></li>
-                                                    <li class="level2"><a href="#" class="site-nav">시니어(7세이상)</a></li>
-                                                    <li class="level2"><a href="#" class="site-nav">전연령</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="lvl-1 sub-level"><a href="#;" class="site-nav">종류</a>
-                                                <ul class="sublinks">
-                                                    <li class="level2"><a href="#" class="site-nav">습식사료</a></li>
-                                                    <li class="level2"><a href="#" class="site-nav">소프트사료</a></li>
-                                                    <li class="level2"><a href="#" class="site-nav">에어/동결사료</a></li>
-                                                    <li class="level2"><a href="#" class="site-nav">건식사료</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="lvl-1 sub-level"><a href="#;" class="site-nav">기능</a>
-                                                <ul class="sublinks">
-                                                    <li class="level2"><a href="#" class="site-nav">체중조절</a></li>
-                                                    <li class="level2"><a href="#" class="site-nav">피부/미모</a></li>
-                                                    <li class="level2"><a href="#" class="site-nav">장/소화</a></li>
-                                                    <li class="level2"><a href="#" class="site-nav">중성화</a></li>
-                                                    <li class="level2"><a href="#" class="site-nav">스트레스완화</a></li>
-                                                    <li class="level2"><a href="#" class="site-nav">눈/눈물</a></li>
-                                                    <li class="level2"><a href="#" class="site-nav">뼈/관절</a></li>
-                                                    <li class="level2"><a href="#" class="site-nav">기타</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="lvl-1 sub-level"><a href="#;" class="site-nav">기타</a>
-                                                <ul class="sublinks">
-                                                    <li class="level2"><a href="#" class="site-nav">맘마샘플</a></li>
-                                                    <li class="level2"><a href="#" class="site-nav">처방식</a></li>
-                                                    <li class="level2"><a href="#" class="site-nav">자연식</a></li>
-                                                    <li class="level2"><a href="#" class="site-nav">전체보기</a></li>
-                                                </ul>
-                                            </li>
+                                <!--age type-->
+                                <div class="sidebar_widget filterBox filter-widget size-swacthes product-type">
+                                    <div class="widget-title"><h2 class="mb-0">급여 연령</h2></div>
+                                    <div class="filterDD">
+                                        <ul class="clearfix">
+                                            <li><input type="checkbox" value="puppy" id="puppy"><label for="puppy"><span></span>퍼피(1세미만)</label></li>
+                                            <li><input type="checkbox" value="adult" id="adult"><label for="adult"><span></span>어덜트(1~7세)</label></li>
+                                            <li><input type="checkbox" value="senior" id="senior"><label for="senior"><span></span>시니어(7세이상)</label></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <!--Categories-->
+                                <!--End age type-->
+                                <!--kind type-->
+                                <div class="sidebar_widget filterBox filter-widget size-swacthes product-type">
+                                    <div class="widget-title"><h2 class="mb-0">종류</h2></div>
+                                    <div class="filterDD">
+                                        <ul class="clearfix">
+                                            <li><input type="checkbox" value="wet-food" id="wet-food"><label for="wet-food"><span></span>습식사료</label></li>
+                                            <li><input type="checkbox" value="soft-food" id="soft-food"><label for="soft-food"><span></span>소프트사료</label></li>
+                                            <li><input type="checkbox" value="air-freezeing-food" id="air-freezeing-food"><label for="air-freezeing-food"><span></span>에어/동결사료</label></li>
+                                            <li><input type="checkbox" value="deflation-food" id="deflation-food"><label for="deflation-food"><span></span>건조사료</label></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--End kind type-->
+                                <!--function type-->
+                                <div class="sidebar_widget filterBox filter-widget size-swacthes product-type">
+                                    <div class="widget-title"><h2 class="mb-0">기능</h2></div>
+                                    <div class="filterDD">
+                                        <ul class="clearfix">
+                                            <li><input type="checkbox" value="weight-control" id="weight-control"><label for="weight-control"><span></span>체중 조절</label></li>
+                                            <li><input type="checkbox" value="skin-beauty" id="skin-beauty"><label for="skin-beauty"><span></span>피부/미모</label></li>
+                                            <li><input type="checkbox" value="intestinal-digestion" id="intestinal-digestion"><label for="intestinal-digestion"><span></span>장/소화</label></li>
+                                            <li><input type="checkbox" value="neutering" id="neutering"><label for="neutering"><span></span>중성화</label></li>
+                                            <li><input type="checkbox" value="stress-relief" id="stress-relief"><label for="stress-relief"><span></span>스트레스완화</label></li>
+                                            <li><input type="checkbox" value="eye-tears" id="eye-tears"><label for="eye-tears"><span></span>눈/눈물</label></li>
+                                            <li><input type="checkbox" value="bones-joints" id="bones-joints"><label for="bones-joints"><span></span>뼈/관절</label></li>
+                                            <li><input type="checkbox" value="func-etc" id="func-etc"><label for="func-etc"><span></span>기타</label></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--End function type-->
+                                <!--etc type-->
+                                <div class="sidebar_widget filterBox filter-widget size-swacthes product-type">
+                                    <div class="widget-title"><h2 class="mb-0">기타</h2></div>
+                                    <div class="filterDD">
+                                        <ul class="clearfix">
+                                            <li><input type="checkbox" value="sample" id="sample"><label for="sample"><span></span>맘마샘플</label></li>
+                                            <li><input type="checkbox" value="prescription-diet" id="prescription-diet"><label for="prescription-diet"><span></span>처방식</label></li>
+                                            <li><input type="checkbox" value="natural-food" id="natural-food"><label for="natural-food"><span></span>자연식</label></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--End etc type-->
                                 <!--Price Filter-->
                                 <div class="sidebar_widget filterBox filter-widget">
                                     <div class="widget-title"><h2 class="mb-0">Price</h2></div>
