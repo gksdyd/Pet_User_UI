@@ -49,7 +49,7 @@
                                 <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open me-3 d-lg-none"><i class="icon an an-times-l"></i><i class="icon an an-bars-l"></i></button>
                                 <!--End Mobile Toggle-->
                                 <!--Logo-->
-                                <div class="logo mx-lg-auto"><a href="index.html"><img class="logo-img" src="assets/images/logo.svg" alt="Optimal Multipurpose eCommerce Bootstrap 5 Html Template" title="Optimal Multipurpose eCommerce Bootstrap 5 Html Template" /><span class="logo-txt d-none">Optimal</span></a></div>
+                                <div class="logo mx-lg-auto"><a href="index.html"><img class="logo-img" src="assets/images/peterpet.png" alt="Optimal Multipurpose eCommerce Bootstrap 5 Html Template" title="Optimal Multipurpose eCommerce Bootstrap 5 Html Template" /><span class="logo-txt d-none">Optimal</span></a></div>
                                 <!--End Logo-->
                             </div>
                             <!--End Logo / Menu Toggle-->
@@ -579,6 +579,22 @@
                         <div class="col-12 col-sm-12 col-md-12 col-lg-3 sidebar filterbar">
                             <div class="closeFilter d-block d-lg-none"><i class="icon icon an an-times-r"></i></div>
                             <div class="sidebar_tags">
+                                <!--Price Filter-->
+                                <div class="sidebar_widget filterBox filter-widget">
+                                    <div class="widget-title"><h2 class="mb-0">Price</h2></div>
+                                    <form action="#" method="post" class="price-filter filterDD">
+                                        <div id="slider-range" class="mt-2"></div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="no-margin"><input id="amount" type="text"></p>
+                                            </div>
+                                            <div class="col-6 text-right margin-25px-top">
+                                                <button class="btn btn--small rounded">filter</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!--End Price Filter-->
                                 <!--age type-->
                                 <div class="sidebar_widget filterBox filter-widget size-swacthes product-type">
                                     <div class="widget-title"><h2 class="mb-0">급여 연령</h2></div>
@@ -746,34 +762,17 @@
                                     </div>
                                 </div>
                                 <!--End material type-->
-                                <!--Price Filter-->
-                                <div class="sidebar_widget filterBox filter-widget">
-                                    <div class="widget-title"><h2 class="mb-0">Price</h2></div>
-                                    <form action="#" method="post" class="price-filter filterDD">
-                                        <div id="slider-range" class="mt-2"></div>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <p class="no-margin"><input id="amount" type="text"></p>
-                                            </div>
-                                            <div class="col-6 text-right margin-25px-top">
-                                                <button class="btn btn--small rounded">filter</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <!--End Price Filter-->
                             </div>
                         </div>
                         <!--End Sidebar-->
 
                         <!--Main Content-->
                         <div class="col-12 col-sm-12 col-md-12 col-lg-9 main-col">
-                            <div class="page-title"><h1>Womens</h1></div>
                             <!--Active Filters-->
                             <ul class="active-filters d-flex flex-wrap align-items-center m-0 list-unstyled">
                                 <li><a href="#">Clear all</a></li>
-                                <li><a href="#">Men <i class="an an-times-l"></i></a></li>
-                                <li><a href="#">Accessories <i class="an an-times-l"></i></a></li>
+                                <li><a href="#">습식사료 <i class="an an-times-l"></i></a></li>
+                                <li><a href="#">눈/눈물 <i class="an an-times-l"></i></a></li>
                             </ul>
                             <!--End Active Filters-->
                             <!--Toolbar-->
@@ -796,14 +795,13 @@
                                             <div class="filters-toolbar__item">
                                                 <label for="SortBy" class="hidden">Sort by:</label>
                                                 <select name="SortBy" id="SortBy" class="filters-toolbar__input filters-toolbar__input--sort">
-                                                    <option value="featured" selected="selected">Featured</option>
-                                                    <option value="best-selling">Best selling</option>
-                                                    <option value="title-ascending">Alphabetically, A-Z</option>
-                                                    <option value="title-descending">Alphabetically, Z-A</option>
-                                                    <option value="price-ascending">Price, low to high</option>
-                                                    <option value="price-descending">Price, high to low</option>
-                                                    <option value="created-ascending">Date, old to new</option>
-                                                    <option value="created-descending">Date, new to old</option>
+                                                    <option value="featured" selected="selected">정렬</option>
+                                                    <option value="best-selling">펫피터랭킹순</option>
+                                                    <option value="title-ascending">최신순</option>
+                                                    <option value="title-descending">판매량순</option>
+                                                    <option value="price-ascending">리뷰많은순</option>
+                                                    <option value="price-descending">낮은가격순</option>
+                                                    <option value="created-ascending">높은가격순</option>
                                                 </select>
                                             </div>
                                         </li>
@@ -819,70 +817,38 @@
                                         <!--Start Product Image-->
                                         <div class="product-image">
                                             <!--Start Product Image-->
-                                            <a href="product-layout1.html" class="product-img">
-                                                <!-- image -->
-                                                <img class="primary blur-up lazyload" data-src="assets/images/products/product-1.jpg" src="assets/images/products/product-1.jpg" alt="image" title="">
-                                                <!-- End image -->
-                                                <!-- Hover image -->
-                                                <img class="hover blur-up lazyload" data-src="assets/images/products/product-1-1.jpg" src="assets/images/products/product-1-1.jpg" alt="image" title="">
-                                                <!-- End hover image -->
+                                            <a href="product-page.html" class="product-img">
+                                                <img class="blur-up lazyload" data-src="assets/images/사료/loyalcanin-dog-indore-puppy-3kg-immunity.jpeg" src="assets/images/사료/loyalcanin-dog-indore-puppy-3kg-immunity.jpeg" alt="image" title="">
+                                                <!-- product label -->
+                                                <div class="product-labels"><span class="lbl on-sale rounded">최저가도전!</span></div>
+                                                <!-- End product label -->
                                             </a>
                                             <!--End Product Image-->
-
-                                            <!--Countdown Timer-->
-                                            <div class="saleTime" data-countdown="2024/10/01"></div>
-                                            <!--End Countdown Timer-->
-
-                                            <!--Product Button-->
-                                            <div class="button-set style0 d-none d-md-block">
-                                                <ul>
-                                                    <!--Cart Button-->
-                                                    <li><a class="btn-icon btn cartIcon pro-addtocart-popup" href="#pro-addtocart-popup"><i class="icon an an-cart-l"></i> <span class="tooltip-label top">Add to Cart</span></a></li>
-                                                    <!--End Cart Button-->
-                                                    <!--Quick View Button-->
-                                                    <li><a class="btn-icon quick-view-popup quick-view" href="javascript:void(0)" data-toggle="modal" data-target="#content_quickview"><i class="icon an an-search-l"></i> <span class="tooltip-label top">Quick View</span></a></li>
-                                                    <!--End Quick View Button-->
-                                                    <!--Wishlist Button-->
-                                                    <li><a class="btn-icon wishlist add-to-wishlist" href="my-wishlist.html"><i class="icon an an-heart-l"></i> <span class="tooltip-label top">Add To Wishlist</span></a></li>
-                                                    <!--End Wishlist Button-->
-                                                    <!--Compare Button-->
-                                                    <li><a class="btn-icon compare add-to-compare" href="compare-style2.html"><i class="icon an an-sync-ar"></i> <span class="tooltip-label top">Add to Compare</span></a></li>
-                                                    <!--End Compare Button-->
-                                                </ul>
-                                            </div>
-                                            <!--End Product Button-->  
                                         </div>
                                         <!--End Product Image-->
                                         <!--Start Product Details-->
                                         <div class="product-details text-center">
                                             <!--Product Name-->
                                             <div class="product-name text-uppercase">
-                                                <a href="product-layout1.html">Floral Crop Top</a>
+                                                <a href="product-page.html">로얄캐닌 독 미니 인도어 퍼피 3kg 면역력</a>
                                             </div>
                                             <!--End Product Name-->
                                             <!--Product Price-->
                                             <div class="product-price">
-                                                <span class="old-price">$199.00</span>
-                                                <span class="price">$219.00</span>
+                                                <div class="old-price">49,700원</div>
+                                                <span class="price">6% 46.500원</span>
                                             </div>
                                             <!--End Product Price-->
                                             <!--Product Review-->
                                             <div class="product-review d-flex align-items-center justify-content-center">
                                                 <i class="an an-star"></i><i class="an an-star"></i><i class="an an-star"></i><i class="an an-star"></i><i class="an an-star-o"></i>
-                                                <span class="caption hidden ms-2">3 reviews</span>
                                             </div>
                                             <!--End Product Review-->
-                                            <!--Sort Description-->
-                                            <p class="hidden sort-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s specimen book...</p>
-                                            <!--End Sort Description-->
-                                            <!--Color Variant -->
-                                            <ul class="image-swatches swatches">
-                                                <li class="radius blue medium"><span class="swacth-btn"></span><span class="tooltip-label">Blue</span></li>
-                                                <li class="radius pink medium"><span class="swacth-btn"></span><span class="tooltip-label">Pink</span></li>
-                                                <li class="radius red medium"><span class="swacth-btn"></span><span class="tooltip-label">Red</span></li>
-                                                <li class="radius yellow medium"><span class="swacth-btn"></span><span class="tooltip-label">Yellow</span></li>
-                                            </ul>
-                                            <!--End Color Variant-->
+                                            <!--deliver-->
+                                            <div class="d-flex align-items-center justify-content-center" style="color: rgb(229, 135, 151);">
+                                                <i class="an an-ship-fast fs-4"></i>&emsp;빠른 배송
+                                            </div>
+                                            <!--End deliver-->
                                             <!-- Product Button -->
                                             <div class="button-action d-flex">
                                                 <div class="addtocart-btn">
@@ -2144,12 +2110,6 @@
                                 </ul>
                             </div>
                             <!--End Pagination Classic-->
-
-                            <!--Collection Description-->
-                            <div class="collection-description mt-4 pt-2">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard reader dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen the book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                            </div>
-                            <!--End Collection Description-->
                         </div>
                         <!--End Main Content-->
                     </div>
