@@ -208,8 +208,6 @@ th { font-family:'Poppins',Arial,Tahoma; font-weight:600; text-transform:upperca
 .btn-info:hover, .btn-info:focus { color:#ffffff; background-color:#31d2f2; border-color:#31d2f2; }
 .btn-warning { background-color:#ffc107; color:#ffffff; border:1px solid #ffc107; }
 .btn-warning:hover, .btn-warning:focus { color:#ffffff; background-color:#ffca2c; border-color:#ffca2c; }
-.btn-exclusive { background-color:#ffc107; color:#ffffff; border:1px solid #ffc107; }
-.btn-exclusive:hover, .btn-exclusive:focus { color:#ffffff; background-color:#ffca2c; border-color:#ffca2c; }
 
 .btn--link { background-color:transparent; border:0; margin:0; color:#090a0a; text-align:left; text-decoration:none; outline:none !important;box-shadow:none !important; }
 .btn--link:hover, .btn--link:focus { color:#fe877b; text-decoration:none; background-color:transparent; }.btn--small, .btn-small { padding:9px 20px; font-size:13px; line-height:1; }
@@ -2766,6 +2764,8 @@ h1.product-single__title, .product-single__title.h1 { color:#000; font-size:22px
 .product-single__price { display:inline-block; margin: 15px 0 15px 0; }
 .product-single__price .product-price__price { font-size:25px; font-weight:500; line-height:1; }
 .product-single__price .product-price-old-price { opacity:0.6; font-size:18px; font-weight:500; text-decoration:line-through; padding-right:10px; }
+.product-price__discount { font-size:18px; font-weight:500; line-height:1; color: #f4857b;}
+.product-purchase-point { opacity:0.6; font-size:18px; font-weight:500; padding-right:10px; }
 
 .countdown-text label { margin: 0 10px 0 0; color: #111; border-bottom: 1px solid rgba(17,17,17,.6); }
 .countdown-text .prcountdown > span { color: #333; font-size: 13px; font-weight: 600; position: relative; padding-right: 8px; margin: 0 4px; text-transform: uppercase; letter-spacing: .09em; }

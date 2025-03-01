@@ -48,3 +48,11 @@
     font-size: x-small;
     font-weight: lighter;
 }
+.exclusive {
+    background-color:#ffffff;
+    color:#f4857b;
+    border:1px solid #ffffff;
+    border:1px solid #f4857b;
+    width: 20%;
+    text-align: center;
+}
