@@ -62,3 +62,15 @@
     line-height:1;
     color: #f4857b;
 }
+.profile-image {
+    width: 80px;
+    height: 80px;
+    border: 1px solid;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.review-image {
+    width: 80px;
+    height: 80px;
+    border: 1px solid;
+}
