@@ -611,7 +611,74 @@
                                         <button type="button" class="fs-6 btn btn-small rounded text-white">인증확인</button>
                                     </div>
                                 </div>
-                                <h2 class="fs-4 mt-3">받는 사람 정보<button type="button" class="fs-6 btn btn-small rounded text-white ms-3">배송지 변경</button></h2>
+                                <h2 class="fs-4 mt-3">받는 사람 정보<button type="button" class="fs-6 btn btn-small rounded text-white ms-3" data-bs-toggle="modal" data-bs-target="#deliver-destination-change">배송지 변경</button></h2>
+                                <!-- Modal -->
+                                <div class="modal fade" id="deliver-destination-change" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content" id="select-destination">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">배송지 선택</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="card deliver-destination-card">
+                                                    <div class="card-body">
+                                                      <h5 class="card-title">정한용</h5>
+                                                      <p class="card-text">서울특별시 노원구 동일로 207길 18, 102동 606호</p>
+                                                      <p>010-6435-8224</p>
+                                                      <p>일반 : 문 앞 (60*******) / 새벽 : 문 앞 (60******)</p>
+                                                      <div class="row">
+                                                        <div class="col text-left">
+                                                            <input type="button" class="fs-6 btn btn-small rounded text-white" id="destination-modify" onclick="showModal('modify')" value="수정">
+                                                        </div>
+                                                        <div class="col text-right">
+                                                            <input type="button" class="fs-6 btn btn-small rounded text-white text-end" value="선택">
+                                                        </div>
+                                                      </div>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <div class="row modal-footer">
+                                                <div class="text-center">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="destination-add" onclick="showModal('add')"><i class="an an-plus-r me-2"></i>배송지 추가</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="modal-content" id="modify-destination">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">배송지 수정</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="card deliver-destination-card">
+                                                    <div class="card-body">
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text" id="basic-addon1">@</span>
+                                                            <input type="text" class="form-control" value="정한용" aria-label="Username" aria-describedby="basic-addon1">
+                                                        </div>
+                                                      <p class="card-text">서울특별시 노원구 동일로 207길 18, 102동 606호</p>
+                                                      <p>010-6435-8224</p>
+                                                      <p>일반 : 문 앞 (60*******) / 새벽 : 문 앞 (60******)</p>
+                                                      <div class="row">
+                                                        <div class="col text-left">
+                                                            <button type="button" class="fs-6 btn btn-small rounded text-white" id="destination-modify" onclick="showContent('modify')">수정</button>
+                                                        </div>
+                                                        <div class="col text-right">
+                                                            <button type="button" class="fs-6 btn btn-small rounded text-white text-end">선택</button>  
+                                                        </div>
+                                                      </div>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <div class="row modal-footer">
+                                                <div class="text-center">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="destination-add" onclick="showContent('add')"><i class="an an-plus-r me-2"></i>배송지 추가</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col-6">
                                         <label class="fs-6">이름</label>
@@ -619,7 +686,7 @@
                                     </div>
                                     <div class="col-6">
                                         <label class="fs-6">배송주소</label>
-                                        <div class="form-group"><input type="text" placeholder="이메일" class="form-control" disabled></div>
+                                        <div class="form-group"><input type="text" placeholder="주소" class="form-control" disabled></div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -629,7 +696,7 @@
                                     </div>
                                     <div class="col-6">
                                         <label class="fs-6">배송 요청사항</label>
-                                        <div class="form-group"><input type="text" placeholder="요청 사항" class="form-control"></div>
+                                        <div class="form-group"><input type="text" placeholder="요청 사항" class="form-control" value="문 앞" disabled></div>
                                     </div>
                                 </div>
                                 <label class="text-uppercase d-none">Country:</label>
@@ -1662,6 +1729,7 @@
             <script src="assets/js/plugins.js"></script>
             <script src="assets/js/main.js"></script>
             <script src="https://kit.fontawesome.com/8cac957ca3.js" crossorigin="anonymous"></script>
+            <script src="assets/js/JHY/jhy.js"></script>
 
         </div>
         <!--End Page Wrapper-->

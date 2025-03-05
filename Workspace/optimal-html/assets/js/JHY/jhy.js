@@ -75,6 +75,7 @@
     // 페이지 진입 시 기본 값
 window.addEventListener('DOMContentLoaded', function() {
     showContent('list');
+    showModal('select');
   });
   
   function showContent(content) {
@@ -93,6 +94,26 @@ window.addEventListener('DOMContentLoaded', function() {
     } else if (content === "register") {
       contentB.style.display = "block";
     } else if (content === "detail") {
+        contentC.style.display = "block";
+      }
+  }
+
+  function showModal(content) {
+    var contentA = document.getElementById("select-destination");
+    var contentB = document.getElementById("modify-destination");
+    var contentC = document.getElementById("add-destination");
+  
+    // 내용 숨김
+    contentA.style.display = "none";
+    contentB.style.display = "none";
+    contentC.style.display = "none";
+  
+    // 선택한 내용 보이기
+    if (content === "select") {
+      contentA.style.display = "block";
+    } else if (content === "modify") {
+      contentB.style.display = "block";
+    } else if (content === "add") {
         contentC.style.display = "block";
       }
   }
