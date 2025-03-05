@@ -566,7 +566,7 @@
                     <div class="collection-hero">
                         <div class="collection-hero__image"></div>
                         <div class="collection-hero__title-wrapper container">
-                            <h1 class="collection-hero__title">주문/결제</h1>
+                            <h1 class="collection-hero__title">주문 / 결제</h1>
                         </div>
                     </div>
                 </div>
@@ -577,16 +577,61 @@
                     <form class="checkout-form" method="post" action="#">
                         <div class="card card--grey">
                             <div class="card-body">
-                                <h2 class="fs-6">구매자 정보</h2>
-                                <!-- <div class="row mt-2"> -->
-                                    <div class="d-flex align-items-center">
-                                        <label class="text-uppercase fs-5">이름</label>
-                                        <div class="form-group"><input type="text" placeholder="First Name" class="form-control"></div>
+                                <h2 class="fs-4">구매자 정보</h2>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label class="fs-6">이름</label>
+                                        <div class="form-group"><input type="text" placeholder="이름" class="form-control" disabled></div>
                                     </div>
-                                    <div class="col-sm-6"><label class="text-uppercase d-none">Last Name:</label>
-                                        <div class="form-group"><input type="text" placeholder="Last Name" class="form-control"></div>
+                                    <div class="col-6">
+                                        <label class="fs-6">이메일</label>
+                                        <div class="form-group"><input type="text" placeholder="이메일" class="form-control" disabled></div>
                                     </div>
-                                <!-- </div> -->
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label class="fs-6">전화번호</label>
+                                        <div class="form-group"><input type="text" placeholder="전화번호" class="form-control"></div>
+                                    </div>
+                                    <div class="col-6 align-self-center mt-3">
+                                        <button type="button" class="collapsed fs-6 btn btn-small rounded text-white" data-bs-toggle="collapse" data-bs-target="#checkout-collapse" aria-expanded="false">수정</button>
+                                    </div>
+                                </div>
+                                <div class="row accordion-collapse collapse" id="checkout-collapse" data-bs-parent="#accordionExample">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="CustomerCertification" class="d-none">인증번호<span class="required">*</span></label>
+                                            <input id="CustomerCertification" type="email" class="form-control" name="customer[CustomerCertification]" placeholder="인증번호" required />                        	
+                                            <div class="invalid-feedback">
+                                                인증번호를 입력해주세요.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <button type="button" class="fs-6 btn btn-small rounded text-white">인증확인</button>
+                                    </div>
+                                </div>
+                                <h2 class="fs-4 mt-3">받는 사람 정보<button type="button" class="fs-6 btn btn-small rounded text-white ms-3">배송지 변경</button></h2>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label class="fs-6">이름</label>
+                                        <div class="form-group"><input type="text" placeholder="이름" class="form-control" disabled></div>
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="fs-6">배송주소</label>
+                                        <div class="form-group"><input type="text" placeholder="이메일" class="form-control" disabled></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label class="fs-6">연락처</label>
+                                        <div class="form-group"><input type="text" placeholder="연락처" class="form-control" disabled></div>
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="fs-6">배송 요청사항</label>
+                                        <div class="form-group"><input type="text" placeholder="요청 사항" class="form-control"></div>
+                                    </div>
+                                </div>
                                 <label class="text-uppercase d-none">Country:</label>
                                 <div class="form-group select-wrapper">
                                     <select id="address_country" name="address[country]" data-default="United States">

@@ -75,6 +75,6 @@
     border: 1px solid;
 }
 .container-checkout {
-    width: 100%;
-    max-width: 1000px;
+    margin: 0 auto;
+    max-width: 800px;
 }
