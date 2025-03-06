@@ -75,7 +75,6 @@
     // 페이지 진입 시 기본 값
 window.addEventListener('DOMContentLoaded', function() {
     showContent('list');
-    showModal('select');
   });
   
   function showContent(content) {
@@ -98,22 +97,15 @@ window.addEventListener('DOMContentLoaded', function() {
       }
   }
 
-  function showModal(content) {
-    var contentA = document.getElementById("select-destination");
-    var contentB = document.getElementById("modify-destination");
-    var contentC = document.getElementById("add-destination");
-  
+  function showModal(modal) {  
     // 내용 숨김
-    contentA.style.display = "none";
-    contentB.style.display = "none";
-    contentC.style.display = "none";
+    $('#select-destination').modal('hide');
+    $('#modify-destination').modal('hide');
   
     // 선택한 내용 보이기
-    if (content === "select") {
-      contentA.style.display = "block";
-    } else if (content === "modify") {
-      contentB.style.display = "block";
-    } else if (content === "add") {
-        contentC.style.display = "block";
-      }
+    if (modal === "select") {
+        $('#select-destination').modal('show');
+    } else if (modal === "modify") {
+        $('#modify-destination').modal('show');
+    }
   }
