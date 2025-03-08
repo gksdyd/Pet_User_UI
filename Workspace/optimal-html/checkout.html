@@ -772,9 +772,28 @@
                     <div class="card card--grey mt-2">
                         <div class="card-body">
                             <h2 class="fs-6">결제 수단</h2>
-                            <div class="customRadio clearfix">
+                            <!-- <div class="customRadio clearfix">
                                 <input id="account-transfer" value="" name="payment-method" type="radio" class="radio" checked="checked"> 
                                 <label for="account-transfer">계좌이체</label>
+                            </div> -->
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item customRadio clearfix">
+                                  <h2 class="accordion-header mt-2 ms-3">
+                                    <input id="account-transfer" value="" name="payment-method" type="radio" class="radio" checked="checked" data-bs-toggle="collapse" data-bs-target="#collapse-account" aria-expanded="true" aria-controls="collapseOne"> 
+                                    <label for="account-transfer">계좌이체</label>
+                                  </h2>
+                                  <div id="collapse-account" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                      <select name="card" id="card">
+                                        <option value="">국민은행</option>
+                                        <option value="">국민은행</option>
+                                        <option value="">국민은행</option>
+                                        <option value="">국민은행</option>
+                                        <option value="">국민은행</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
                             </div>
                             <div class="customRadio clearfix">
                                 <input id="credit-check-card" value="" name="payment-method" type="radio" class="radio"> 
