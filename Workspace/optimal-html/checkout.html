@@ -772,177 +772,202 @@
                     <div class="card card--grey mt-2">
                         <div class="card-body">
                             <h2 class="fs-6">결제 수단</h2>
-                            <!-- <div class="customRadio clearfix">
-                                <input id="account-transfer" value="" name="payment-method" type="radio" class="radio" checked="checked"> 
-                                <label for="account-transfer">계좌이체</label>
-                            </div> -->
-                            <div class="accordion" id="accordionExample">
+                            <div class="accordion" id="accordion1">
                                 <div class="accordion-item customRadio clearfix">
-                                  <h2 class="accordion-header mt-2 ms-3">
-                                    <input id="account-transfer" value="" name="payment-method" type="radio" class="radio" checked="checked" data-bs-toggle="collapse" data-bs-target="#collapse-account" aria-expanded="true" aria-controls="collapseOne"> 
-                                    <label for="account-transfer">계좌이체</label>
-                                  </h2>
-                                  <div id="collapse-account" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <h2 class="accordion-header mt-2 ms-3">
+                                        <input id="account-transfer" value="" name="payment-method" type="radio" class="radio" data-bs-toggle="collapse" data-bs-target="#collapse-account"> 
+                                        <label for="account-transfer">계좌이체</label>
+                                    </h2>
+                                </div>
+                                <div id="collapse-account" class="accordion-collapse collapse" data-bs-parent="#accordion1">
                                     <div class="accordion-body">
-                                      <select name="card" id="card">
-                                        <option value="">국민은행</option>
-                                        <option value="">국민은행</option>
-                                        <option value="">국민은행</option>
-                                        <option value="">국민은행</option>
-                                        <option value="">국민은행</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                </div>
-                            </div>
-                            <div class="customRadio clearfix">
-                                <input id="credit-check-card" value="" name="payment-method" type="radio" class="radio"> 
-                                <label for="credit-check-card">신용/체크카드</label>
-                            </div>
-                            <div class="customRadio clearfix">
-                                <input id="corporate-card" value="" name="payment-method" type="radio" class="radio"> 
-                                <label for="corporate-card">법인카드</label>
-                            </div>
-                            <div class="customRadio clearfix">
-                                <input id="hand-phone" value="" name="payment-method" type="radio" class="radio"> 
-                                <label for="hand-phone">휴대폰</label>
-                            </div>
-                            <div class="customRadio clearfix">
-                                <input id="bank-transfer" value="" name="payment-method" type="radio" class="radio"> 
-                                <label for="bank-transfer">무통장입금(가상계좌)</label>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <label class="text-uppercase d-none">Card Number</label>
-                                    <div class="form-group"><input type="text" placeholder="Card Number" class="form-control" pattern="[0-9\-]*"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <label class="text-uppercase">Month:</label>
-                                    <div class="form-group select-wrapper">
-                                        <select class="form-control">
-                                            <option selected="selected" value="1">January</option>
-                                            <option value="2">February</option>
-                                            <option value="3">March</option>
-                                            <option value="4">April</option>
-                                            <option value="5">May</option>
-                                            <option value="6">June</option>
-                                            <option value="7">July</option>
-                                            <option value="8">August</option>
-                                            <option value="9">September</option>
-                                            <option value="10">October</option>
-                                            <option value="11">November</option>
-                                            <option value="12">December</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <label class="text-uppercase">Year:</label>
-                                    <div class="form-group select-wrapper">
-                                        <select class="form-control">
-                                            <option value="2019">2019</option>
-                                            <option value="2020">2020</option>
-                                            <option value="2021">2021</option>
-                                            <option value="2022">2022</option>
-                                            <option value="2023">2023</option>
-                                            <option value="2024">2024</option>
-                                        </select>
+                                        <div class="row align-items-center">
+                                            <div class="col-4">
+                                                <select name="card" id="card">
+                                                <option value="">국민은행 / ***********5089</option>
+                                                <option value="">국민은행</option>
+                                                <option value="">국민은행</option>
+                                                <option value="">국민은행</option>
+                                                <option value="">국민은행</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="checkbox" class="me-2">기본 결제 수단으로 사용
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <label class="text-uppercase d-none">CVV Code</label>
-                                    <div class="form-group m-0"><input type="text" placeholder="CVV Code" class="form-control" pattern="[0-9\-]*"></div>
+
+                            <div class="accordion" id="accordion2">
+                                <div class="accordion-item customRadio clearfix">
+                                    <h2 class="accordion-header mt-2 ms-3">
+                                        <input id="credit-check-card" value="" name="payment-method" type="radio" class="radio" data-bs-toggle="collapse" data-bs-target="#collapse-credit"> 
+                                        <label for="credit-check-card">신용/체크카드</label>
+                                    </h2>
+                                </div>
+                                <div id="collapse-credit" class="accordion-collapse collapse" data-bs-parent="#accordion2">
+                                    <div class="accordion-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-4">
+                                                <select name="card" id="card">
+                                                <option value="">국민카드 / 423210**********360*</option>
+                                                <option value="">국민카드</option>
+                                                <option value="">국민카드</option>
+                                                <option value="">국민카드</option>
+                                                <option value="">국민카드</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-4">
+                                                <select name="card" id="card">
+                                                <option value="">일시불</option>
+                                                <option value="">3개월</option>
+                                                <option value="">4개월</option>
+                                                <option value="">5개월</option>
+                                                <option value="">6개월</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="checkbox" class="me-2">기본 결제 수단으로 사용
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <ul>
+                                                <li>할부는 5만원 이상부터 가능합니다.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4 dropend">
+                                                <button type="button" class="card-discount-info d-flex-center" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    카드할인 및 무이자할부 안내<i class="an an-angle-right-l ms-2"></i></button>
+                                                <div class="dropdown-menu">
+                                                    <div class="card-header bg-white">카드 혜택</div>
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">무이자 할부 혜택</h5>
+                                                        <div class="card-body" style="border-style: groove; width: 30rem;">
+                                                            <div class="row spr-header">
+                                                                <div class="col-4">
+                                                                    <img src="assets/images/bank-logo/국민은행_로고_PNG_AI_원본_다운.png" alt="">
+                                                                </div>
+                                                                <div class="col-8">
+                                                                    5만원 이상 2~5개월
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <h5 class="card-title mt-4">부분 무이자 할부 혜택</h5>
+                                                        <div class="card-body" style="border-style: groove; width: 30rem;">
+                                                            <div class="row spr-header">
+                                                                <div class="col-4 d-flex-center">
+                                                                    <img src="assets/images/bank-logo/국민은행_로고_PNG_AI_원본_다운.png" alt="">
+                                                                </div>
+                                                                <div class="col-8">
+                                                                    <p class="spr-header">5만원 이상 6개월 (1~3회차 수수료 고개부담)</p>
+                                                                    <p>5만원 이상 10개월 (1~5회차 수수료 고개부담)</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion" id="accordion3">
+                                <div class="accordion-item customRadio clearfix">
+                                    <h2 class="accordion-header mt-2 ms-3">
+                                        <input id="corporate-card" value="" name="payment-method" type="radio" class="radio" data-bs-toggle="collapse" data-bs-target="#collapse-corporate"> 
+                                        <label for="corporate-card">법인카드</label>
+                                    </h2>
+                                </div>
+                                <div id="collapse-corporate" class="accordion-collapse collapse" data-bs-parent="#accordion3">
+                                    <div class="accordion-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-4">
+                                                <select name="card" id="card">
+                                                <option value="">국민카드 / 423210**********360*</option>
+                                                <option value="">국민카드</option>
+                                                <option value="">국민카드</option>
+                                                <option value="">국민카드</option>
+                                                <option value="">국민카드</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="checkbox" class="me-2">기본 결제 수단으로 사용
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <ul>
+                                                <li>법인카드는 일시불 결제만 가능합니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion" id="accordion4">
+                                <div class="accordion-item customRadio clearfix">
+                                    <h2 class="accordion-header mt-2 ms-3">
+                                        <input id="hand-phone" value="" name="payment-method" type="radio" class="radio" data-bs-toggle="collapse" data-bs-target="#collapse-phone"> 
+                                        <label for="hand-phone">휴대폰</label>
+                                    </h2>
+                                </div>
+                                <div id="collapse-phone" class="accordion-collapse collapse" data-bs-parent="#accordion4">
+                                    <div class="accordion-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-4">
+                                                <select name="card" id="card">
+                                                <option value="">SKT</option>
+                                                <option value="">SK</option>
+                                                <option value="">LG U+</option>
+                                                <option value="">알뜰폰</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="checkbox" class="me-2">기본 결제 수단으로 사용
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion" id="accordion5">
+                                <div class="accordion-item customRadio clearfix">
+                                    <h2 class="accordion-header mt-2 ms-3">
+                                        <input id="bank-transfer" value="" name="payment-method" type="radio" class="radio" data-bs-toggle="collapse" data-bs-target="#collapse-bank"> 
+                                        <label for="bank-transfer">무통장입금(가상계좌)</label>
+                                    </h2>
+                                </div>
+                                <div id="collapse-bank" class="accordion-collapse collapse" data-bs-parent="#accordion5">
+                                    <div class="accordion-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-4">
+                                                <select name="card" id="card">
+                                                <option value="">국민은행 / ***********5089</option>
+                                                <option value="">국민은행</option>
+                                                <option value="">국민은행</option>
+                                                <option value="">국민은행</option>
+                                                <option value="">국민은행</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="checkbox" class="me-2">기본 결제 수단으로 사용
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <ul>
+                                                <li>입금기한: 2025년 3월 10일 13시 31분까지</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card card--grey mt-2">
-                        <div class="card-body">
-                            <h2 class="fs-6">Order Comment</h2>
-                            <label class="text-uppercase d-none">Write a comment here:</label> 
-                            <textarea class="form-control textarea--height-200" rows="5" placeholder="Write a comment here"></textarea>
-                        </div>
-                    </div>
-                    <h2 class="title fs-6">ORDER SUMMARY</h2>
-                    <div class="table-responsive order-table style1"> 
-                        <table class="table table-bordered align-middle table-hover text-center mb-1">
-                            <thead>
-                                <tr>
-                                    <th>Product</th>
-                                    <th class="text-start">Name</th>
-                                    <th>Price</th>
-                                    <th>Qty</th>
-                                    <th>Subtotal</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="thumbImg"><a href="product-layout1.html" class="thumb d-inline-block"><img class="cart__image" src="assets/images/products/100x120.jpg" alt="Sunset Sleep Scarf Top" width="80" /></a></td>
-                                    <td class="text-start">
-                                        <a href="product-layout1.html">Scarf Top</a>
-                                        <div class="cart__meta-text">
-                                            Color: Black<br>Size: Small<br>
-                                        </div>
-                                    </td>
-                                    <td>$99.00</td>
-                                    <td>1</td>
-                                    <td class="fw-500">$99.00</td>
-                                </tr>
-                                <tr>
-                                    <td class="thumbImg"><a href="product-layout1.html" class="thumb d-inline-block"><img class="cart__image" src="assets/images/products/100x120.jpg" alt="Long Sleeve T-shirts" width="80" /></a></td>
-                                    <td class="text-start">
-                                        <a href="product-layout1.html">Sleeve T-shirts</a>
-                                        <div class="cart__meta-text">
-                                            Color: Gray<br>Size: 28<br>
-                                        </div>
-                                    </td>
-                                    <td>$128.00</td>
-                                    <td>2</td>
-                                    <td class="fw-500">$256.00</td>
-                                </tr>
-                                <tr>
-                                    <td class="thumbImg"><a href="product-layout1.html" class="thumb d-inline-block"><img class="cart__image" src="assets/images/products/100x120.jpg" alt="Weave Hoodie Sweatshirt" width="80" /></a></td>
-                                    <td class="text-start">
-                                        <a href="product-layout1.html">Hoodie Sweatshirt</a>
-                                        <div class="cart__meta-text">
-                                            Color: Navy<br>Size: Large<br>
-                                        </div>
-                                    </td>
-                                    <td>$150.00</td>
-                                    <td>3</td>
-                                    <td class="fw-500">$450.00</td>
-                                </tr>
-                            </tbody>
-                            <tfoot class="font-weight-600">
-                                <tr>
-                                    <td colspan="4" class="text-end fw-bolder">Shipping </td>
-                                    <td class="fw-bolder">$50.00</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="4" class="text-end fw-bolder">Total</td>
-                                    <td class="fw-bolder">$855.00</td>
-                                </tr>
-                            </tfoot>
-                        </table>
                     </div>
 
-                    <div class="card card--grey mt-2">
-                        <div class="card-body">
-                            <h2 class="fs-6">Apply Couponcode</h2>
-                            <label class="text-uppercase d-none">Enter Coupon code:</label>
-                            <div class="input-group flex-nowrap">
-                                <input class="input-group__field" type="text" placeholder="Coupon code" name="coupon">
-                                <span class="input-group__btn">
-                                    <input type="button" class="btn rounded-end text-nowrap" value="Apply">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-button-payment mt-2 clearfix"><a href="checkout-success.html" class="cartCheckout fs-6 btn btn-lg rounded w-100 fw-600 text-white">Place order</a></div>
-                    <div class="paymnet-img text-center"><img src="assets/images/payment-img.jpg" alt="Payment"></div>
+                    <div class="order-button-payment mt-2 clearfix"><a href="checkout-success.html" class="cartCheckout fs-6 btn btn-lg rounded w-100 fw-600 text-white">결제하기</a></div>
                 </div>
                 <!--End Main Content-->
             </div>

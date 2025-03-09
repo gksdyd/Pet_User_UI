@@ -82,3 +82,8 @@
     width: 100%;
     border-color: black;
 }
+.card-discount-info {
+    color: blue;
+    border-style: hidden;
+    background: none;
+}
