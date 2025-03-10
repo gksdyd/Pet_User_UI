@@ -109,3 +109,13 @@ window.addEventListener('DOMContentLoaded', function() {
         $('#modify-destination').modal('show');
     }
   }
+
+  function paymentPage() {
+    if (document.getElementById("account-transfer").checked) {
+        $('#account-check').modal('show');
+    } else if (document.getElementById("credit-check-card").checked) {
+        $('#card-register').modal('show');
+    } else if (document.getElementById("bank-transfer").checked) {
+        location.href='http://127.0.0.1:5500/Workspace/optimal-html/checkout-success.html';
+    }
+  }

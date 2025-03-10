@@ -772,14 +772,14 @@
                     <div class="card card--grey mt-2">
                         <div class="card-body">
                             <h2 class="fs-6">결제 수단</h2>
-                            <div class="accordion" id="accordion1">
+                            <div class="accordion" id="accordion-payment">
                                 <div class="accordion-item customRadio clearfix">
                                     <h2 class="accordion-header mt-2 ms-3">
                                         <input id="account-transfer" value="" name="payment-method" type="radio" class="radio" data-bs-toggle="collapse" data-bs-target="#collapse-account"> 
                                         <label for="account-transfer">계좌이체</label>
                                     </h2>
                                 </div>
-                                <div id="collapse-account" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                                <div id="collapse-account" class="accordion-collapse collapse" data-bs-parent="#accordion-payment">
                                     <div class="accordion-body">
                                         <div class="row align-items-center">
                                             <div class="col-4">
@@ -797,16 +797,14 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="accordion" id="accordion2">
                                 <div class="accordion-item customRadio clearfix">
                                     <h2 class="accordion-header mt-2 ms-3">
                                         <input id="credit-check-card" value="" name="payment-method" type="radio" class="radio" data-bs-toggle="collapse" data-bs-target="#collapse-credit"> 
                                         <label for="credit-check-card">신용/체크카드</label>
                                     </h2>
                                 </div>
-                                <div id="collapse-credit" class="accordion-collapse collapse" data-bs-parent="#accordion2">
+                                <div id="collapse-credit" class="accordion-collapse collapse" data-bs-parent="#accordion-payment">
                                     <div class="accordion-body">
                                         <div class="row align-items-center">
                                             <div class="col-4">
@@ -873,48 +871,14 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="accordion" id="accordion3">
-                                <div class="accordion-item customRadio clearfix">
-                                    <h2 class="accordion-header mt-2 ms-3">
-                                        <input id="corporate-card" value="" name="payment-method" type="radio" class="radio" data-bs-toggle="collapse" data-bs-target="#collapse-corporate"> 
-                                        <label for="corporate-card">법인카드</label>
-                                    </h2>
-                                </div>
-                                <div id="collapse-corporate" class="accordion-collapse collapse" data-bs-parent="#accordion3">
-                                    <div class="accordion-body">
-                                        <div class="row align-items-center">
-                                            <div class="col-4">
-                                                <select name="card" id="card">
-                                                <option value="">국민카드 / 423210**********360*</option>
-                                                <option value="">국민카드</option>
-                                                <option value="">국민카드</option>
-                                                <option value="">국민카드</option>
-                                                <option value="">국민카드</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-4">
-                                                <input type="checkbox" class="me-2">기본 결제 수단으로 사용
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <ul>
-                                                <li>법인카드는 일시불 결제만 가능합니다.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion" id="accordion4">
+                            
                                 <div class="accordion-item customRadio clearfix">
                                     <h2 class="accordion-header mt-2 ms-3">
                                         <input id="hand-phone" value="" name="payment-method" type="radio" class="radio" data-bs-toggle="collapse" data-bs-target="#collapse-phone"> 
                                         <label for="hand-phone">휴대폰</label>
                                     </h2>
                                 </div>
-                                <div id="collapse-phone" class="accordion-collapse collapse" data-bs-parent="#accordion4">
+                                <div id="collapse-phone" class="accordion-collapse collapse" data-bs-parent="#accordion-payment">
                                     <div class="accordion-body">
                                         <div class="row align-items-center">
                                             <div class="col-4">
@@ -931,16 +895,14 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="accordion" id="accordion5">
+                            
                                 <div class="accordion-item customRadio clearfix">
                                     <h2 class="accordion-header mt-2 ms-3">
                                         <input id="bank-transfer" value="" name="payment-method" type="radio" class="radio" data-bs-toggle="collapse" data-bs-target="#collapse-bank"> 
                                         <label for="bank-transfer">무통장입금(가상계좌)</label>
                                     </h2>
                                 </div>
-                                <div id="collapse-bank" class="accordion-collapse collapse" data-bs-parent="#accordion5">
+                                <div id="collapse-bank" class="accordion-collapse collapse" data-bs-parent="#accordion-payment">
                                     <div class="accordion-body">
                                         <div class="row align-items-center">
                                             <div class="col-4">
@@ -967,11 +929,85 @@
                         </div>
                     </div>
 
-                    <div class="order-button-payment mt-2 clearfix"><a href="checkout-success.html" class="cartCheckout fs-6 btn btn-lg rounded w-100 fw-600 text-white">결제하기</a></div>
+                    <div class="order-button-payment mt-2 clearfix" onclick="paymentPage()"><a class="cartCheckout fs-6 btn btn-lg rounded w-100 fw-600 text-white">결제하기</a></div>
                 </div>
                 <!--End Main Content-->
             </div>
             <!--End Body Container-->
+
+            <!-- Modal -->
+            <div class="modal fade" id="account-check" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">본인 계좌 확인</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">정한용님, 본인 계좌 확인 (최초 1회만)</h5>
+                                    <form class="form-floating">
+                                        <input type="text" class="form-control" id="floatingInputInvalid" placeholder="가상·적금·펀드 계좌 불가">
+                                        <label for="floatingInputInvalid">계좌번호 (숫자만 입력)</label>
+                                        <div class="text-center">
+                                            <input type="button" class="fs-6 btn btn-small rounded text-white mt-3" id="button-check" value="계좌 확인 요청">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="card-register" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img class="modal-title mb-3" src="assets/images/bank-logo/SC제일은행_로고_PNG_AI_원본_다운.png">
+                                    <form>
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="card-number">
+                                            <label for="card-number">카드번호</label>
+                                        </div>
+                                        <div class="row d-flex mb-3">
+                                            <div class="col">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="valid-month">
+                                                    <label for="valid-month">유효기간(MM)</label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="valid-year">
+                                                    <label for="valid-year">유효기간(YY)</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="cvc">
+                                            <label for="cvc">CVC</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="password">
+                                            <label for="password">비밀번호</label>
+                                        </div>
+                                        <div class="text-center">
+                                            <input type="button" class="fs-6 btn btn-small rounded text-white mt-3" id="button-check" value="등록하고 결제하기">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!--Footer-->
             <div class="footer footer-1">
